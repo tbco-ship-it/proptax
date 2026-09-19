@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ c.name }}, {{ c.st }} property tax rate {{ c.rate|pct }} — median bill {{ c.tax_med|usd }}, due dates & calculator | {{ site }}{% endblock %}
+{% block description %}{{ c.name }}, {{ s.name }}: effective property tax rate {{ c.rate|pct }} ({{ 'above' if c.ratio_us and c.ratio_us > 1 else 'below' }} the U.S. median {{ us.rate|pct }}), median annual tax {{ c.tax_med|usd }} on a median home of {{ c.home_med|usd }}. Ranks {{ c.rank_state }} of {{ c.n_state }} in {{ s.name }}. Estimate your bill and see when it is due.{% endblock %}
+{% block head %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"{{ c.name }}, {{ c.st }} property tax rate","description":"Effective property tax rate {{ c.rate|pct }}, median real estate taxes paid {{ c.tax_med|usd }}, median home value {{ c.home_med|usd }} (ACS {{ source.vintage }})","spatialCoverage":"{{ c.name }}, {{ s.name }}","creator":{"@type":"Organization","name":"U.S. Census Bureau"},"license":"https://www.usa.gov/government-works","url":"{{ origin }}{{ base }}{{ path }}"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the property tax rate in {{ c.name }}, {{ c.st }}?","acceptedAnswer":{"@type":"Answer","text":"The effective property tax rate in {{ c.name }} is {{ c.rate|pct }} of home value — homeowners pay a median of {{ c.tax_med|usd }} a year on a median home worth {{ c.home_med|usd }} (Census ACS {{ source.vintage }}). The {{ s.name }} median is {{ s.rate|pct }} and the U.S. median is {{ us.rate|pct }}."}},{"@type":"Question","name":"How much property tax would I pay on a $300,000 home in {{ c.name }}?","acceptedAnswer":{"@type":"Answer","text":"At the county's median effective rate of {{ c.rate|pct }}, a $300,000 home would owe about {{ (300000 * (c.rate or 0) / 100)|usd }} a year, before exemptions such as a homestead exemption."}}{% if s.rules %},{"@type":"Question","name":"When are property taxes due in {{ s.name }}?","acceptedAnswer":{"@type":"Answer","text":"{% for d in s.rules.due %}{{ d.label }}: {{ d.due }}{% if d.delinquent %} (delinquent after {{ d.delinquent }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}. {{ s.rules.penalty }}"}}{% endif %}]}</script>
+{% endblock %}
+{% block content %}
+<nav class="crumbs"><a href="{{ base }}">Home</a> › <a href="{{ base }}{{ s.path }}">{{ s.name }}</a> › {{ c.name }}</nav>
+<h1>{{ c.name }}, {{ c.st }} property tax rate</h1>
+<section class="sheet {{ 'severe' if c.ratio_us and c.ratio_us >= 1.5 else ('mild' if c.ratio_us and c.ratio_us > 1.1 else 'balanced') }}" data-rate="{{ c.rate or '' }}" data-name="{{ c.name }}">
+  <p class="sheet-label">{{ c.name }} · {{ s.name }}{% if c.rank_state %} · #{{ c.rank_state }} of {{ c.n_state }} in the state{% endif %}</p>
+  <div class="sheet-num"><span class="num">{{ c.rate|pct }}</span><span class="pct">effective</span></div>
+  <p class="sheet-title">{% if c.rate %}Median bill {{ c.tax_med|usd }}{% if c.topcoded %} or less{% endif %} a year on a {{ c.home_med|usd }} home{% else %}Census does not publish a reliable median for this county{% endif %}</p>
+  <p class="sheet-text">{% if c.ratio_us %}{{ 'Higher' if c.ratio_us > 1 else 'Lower' }} than the U.S. median {{ us.rate|pct }} ({{ c.ratio_us }}×){% if c.ratio_state %} and {{ 'higher' if c.ratio_state > 1 else 'lower' }} than the {{ s.name }} median {{ s.rate|pct }}{% endif %}.{% endif %}{% if c.topcoded %} The Census tops the lowest tax bracket at $200, so the true median here is at or below that.{% endif %}</p>
+  {% if c.rate %}
+  <label class="field" style="margin-top:14px">Your home value
+    <div class="money"><span class="unit">$</span><input id="val" class="num-in" type="text" inputmode="numeric" placeholder="{{ '{:,}'.format(c.home_med) }}" aria-describedby="est"></div>
+  </label>
+  <p id="est" class="sheet-text"><b id="est-year">{{ (c.home_med * c.rate / 100)|usd }}</b> a year · <span id="est-month">{{ (c.home_med * c.rate / 100 / 12)|usd }}</span> a month at the median rate, before exemptions.</p>
+  {% endif %}
+  <table class="tbl spec mini"><tbody>
+    <tr><th>Median real estate taxes paid</th><td>{{ c.tax_med|usd }}{% if c.topcoded %} or less{% endif %}</td></tr>
+    {% if c.tax_mortgage %}<tr><th>With a mortgage / without</th><td>{{ c.tax_mortgage|usd }} / {{ c.tax_nomortgage|usd }}</td></tr>{% endif %}
+    <tr><th>Median home value</th><td>{{ c.home_med|usd }}</td></tr>
+    {% if c.income_med %}<tr><th>Median household income</th><td>{{ c.income_med|usd }}{% if c.tax_med %} · tax is {{ (c.tax_med / c.income_med * 100)|round(1) }}% of it{% endif %}</td></tr>{% endif %}
+    {% if c.rent_med %}<tr><th>Median gross rent</th><td>{{ c.rent_med|usd }} / mo</td></tr>{% endif %}
+    {% if c.units %}<tr><th>Owner-occupied</th><td>{{ (c.owner_units / c.units * 100)|round|int }}% of {{ '{:,}'.format(c.units) }} homes</td></tr>{% endif %}
+    {% if c.population %}<tr><th>Population</th><td>{{ '{:,}'.format(c.population) }}</td></tr>{% endif %}
+  </tbody></table>
+  <p class="sheet-actions"><a class="next" href="{{ base }}{{ s.path }}">All {{ s.name }} counties</a>{% if c.rank_us %}<a class="next" href="{{ base }}rankings/{{ 'highest' if c.rank_us <= c.n_us / 2 else 'lowest' }}/">#{{ c.rank_us }} of {{ '{:,}'.format(c.n_us) }} U.S. counties</a>{% endif %}</p>
+</section>
+<div class="ad-slot"><!-- ad: county --></div>
+{% if s.rules %}
+<div class="sec"><div class="sec-h"><h2>When it's due in {{ s.name }}</h2><a href="{{ base }}guide/due-dates/">All states</a></div>
+<table class="tbl spec"><tbody>
+{% for d in s.rules.due %}<tr><th>{{ d.label }}</th><td>{{ d.due }}{% if d.delinquent %} <span class="muted">· delinquent {{ d.delinquent }}</span>{% endif %}</td></tr>{% endfor %}
+{% if s.rules.penalty %}<tr><th>Late penalty</th><td>{{ s.rules.penalty }}</td></tr>{% endif %}
+{% if s.rules.discount and s.rules.discount != 'none' %}<tr><th>Early-payment discount</th><td>{{ s.rules.discount }}</td></tr>{% endif %}
+{% if s.rules.appeal_window %}<tr><th>Appeal window</th><td>{{ s.rules.appeal_window }}</td></tr>{% endif %}
+</tbody></table>
+<p class="muted small">{{ s.rules.note }} Source: <a href="{{ s.rules.source_url }}" rel="noopener">{{ s.rules.statute or s.rules.source_url }}</a>{% if s.rules.installments == 0 %} — {{ s.name }} counties set their own dates; check {{ c.name }}'s treasurer.{% endif %}</p></div>
+{% else %}
+<div class="sec"><div class="sec-h"><h2>When it's due</h2></div><p class="prose">{{ s.name }} due dates are being verified against state statute — see <a href="{{ base }}guide/due-dates/">due dates by state</a> for the states already checked, and the {{ c.name }} treasurer or tax collector for this year's bill.</p></div>
+{% endif %}
+{% if near %}<div class="sec"><div class="sec-h"><h2>{{ s.name }} counties with a similar rate</h2><a href="{{ base }}{{ s.path }}">All {{ s.counties|length }}</a></div>
+<ul class="list">{% for n in near %}<li><a href="{{ base }}{{ n.path }}">{{ n.name }}<span class="meta">{{ n.rate|pct }} · {{ n.tax_med|usd }}</span></a></li>{% endfor %}</ul></div>{% endif %}
+<section class="prose">
+  <h2>How this rate was computed</h2>
+  <p>Median real estate taxes paid by owner-occupied households in {{ c.name }} ({{ c.tax_med|usd }}) divided by the median value of those homes ({{ c.home_med|usd }}), both from the Census Bureau's American Community Survey {{ source.vintage }} 5-year estimates. It is what a typical homeowner pays, not the assessor's mill rate, and it already reflects exemptions people actually claim. Newly purchased homes are often reassessed to sale price, so a buyer's first bill can be higher than the median. <a href="{{ base }}methodology/">Data & method</a></p>
+</section>
+<script src="{{ base }}static/app.js?v={{ v }}" defer></script>
+{% endblock %}

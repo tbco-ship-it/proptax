@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Property tax rate by county — effective rate, median bill and due dates for all {{ '{:,}'.format(n_counties) }} U.S. counties | {{ site }}{% endblock %}
+{% block head %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"{{ site }}","applicationCategory":"FinanceApplication","inLanguage":"en","url":"{{ origin }}{{ base }}","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script>document.documentElement.classList.add('landing')</script>{% endblock %}
+{% block content %}
+<div class="stage" id="stage">
+<section class="hero">
+  <h1>What's the property tax rate in my county?</h1>
+  <p>Type a county or state. You get the effective rate homeowners actually pay, the median bill, and an estimate for your own home value — plus when the bill is due in your state. {{ '{:,}'.format(n_counties) }} counties, Census data, no sign-up.</p>
+</section>
+
+<section class="calc-grid">
+<div class="calc card" id="calc">
+  <h2 class="card-title">Your county</h2>
+  <label class="field">County or state
+    <input id="q" class="pick search" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" autocomplete="off" placeholder="e.g. Cook County, Harris, Texas"><ul class="menu" id="q-menu" role="listbox" hidden></ul>
+  </label>
+  <label class="field">Home value <span class="muted small">(optional — for your estimate)</span>
+    <div class="money"><span class="unit">$</span><input id="val" class="num-in" type="text" inputmode="numeric" placeholder="350,000"></div>
+  </label>
+  <p class="muted small">Estimate = home value × the county's median effective rate. Exemptions (homestead, senior, veteran) lower it; a reassessment can raise it.</p>
+  <button type="button" class="last" id="last" hidden><span>Last county</span><b id="last-name"></b></button>
+</div>
+<div id="result" class="result" aria-live="polite"></div>
+</section>
+</div>
+
+<div class="below" id="below">
+<div class="ad-slot"><!-- ad: home --></div>
+
+<section class="grid2">
+  <div class="sec">
+    <div class="sec-h"><h2>Highest rates</h2><a href="{{ base }}rankings/highest/">Top 100</a></div>
+    <ul class="list">{% for c in top %}<li><a href="{{ base }}{{ c.path }}">{{ c.name }}, {{ c.st }}<span class="meta">{{ c.rate|pct }}</span></a></li>{% endfor %}</ul>
+  </div>
+  <div class="sec">
+    <div class="sec-h"><h2>Lowest rates</h2><a href="{{ base }}rankings/lowest/">Bottom 100</a></div>
+    <ul class="list">{% for c in bottom %}<li><a href="{{ base }}{{ c.path }}">{{ c.name }}, {{ c.st }}<span class="meta">{{ c.rate|pct }}</span></a></li>{% endfor %}</ul>
+  </div>
+</section>
+
+<div class="sec"><div class="sec-h"><h2>By state</h2><a href="{{ base }}states/">All states compared</a></div>
+<ul class="list">{% for s in state_list[:12] %}<li><a href="{{ base }}{{ s.path }}">{{ s.name }}<span class="meta">{{ s.rate|pct }} · median {{ s.tax_med|usd }}</span></a></li>{% endfor %}</ul></div>
+
+<section class="prose">
+  <h2>"Effective rate" is the number that matters</h2>
+  <p>Assessors publish mill rates against an assessed value that is often a fraction of market value, so two counties with the same mill rate can bill very differently. The effective rate here is the median real-estate tax homeowners reported paying divided by the median home value in the same county — the share of your home's value that goes to property tax each year. The U.S. median is {{ us.rate|pct }}, or {{ us.tax_med|usd }} on a {{ us.home_med|usd }} home. <a href="{{ base }}guide/how-property-tax-is-calculated/">How the bill is built</a></p>
+  <h2>Due dates are set by the state, penalties by the county</h2>
+  <p>Texas bills are due January 31, California splits into December 10 and April 10, Illinois counties each pick their own. <a href="{{ base }}guide/due-dates/">Due dates by state</a> lists installments, delinquency dates and penalties with the statute behind each.</p>
+</section>
+</div>
+<script src="{{ base }}static/app.js?v={{ v }}" defer></script>
+{% endblock %}

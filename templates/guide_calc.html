@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}How property tax is calculated — assessed value, mill rate, exemptions and why your bill differs from the rate | {{ site }}{% endblock %}
+{% block description %}Property tax = assessed value × assessment ratio × total mill rate − exemptions. What each piece means, why "1%" can become 2%, and how reassessment after a purchase changes the bill.{% endblock %}
+{% block content %}
+<nav class="crumbs"><a href="{{ base }}">Home</a> › How property tax is calculated</nav>
+<h1>How property tax is calculated</h1>
+<div class="prose">
+<h2>The formula</h2>
+<p><b>Assessed value × assessment ratio × total levy (mill rate) − exemptions = tax bill.</b> A mill is $1 per $1,000 of taxable value, so 25 mills on $200,000 of taxable value is $5,000. The "total levy" stacks every taxing district on your parcel: county, city, school district, community college, fire, library, hospital, water. School districts are usually the largest slice.</p>
+<h2>Assessed value is not market value</h2>
+<p>Many states assess at a fraction of market value — 10% in Illinois (Cook County residential), 35% in Ohio, 100% in Florida. That is why a 6% "rate" in Cook County works out to an effective 1.9% of what the home is worth. The effective rate on this site skips the ratio games: median tax actually paid ÷ median home value.</p>
+<h2>Caps and reassessment</h2>
+<p>California (Prop 13), Florida (Save Our Homes), Michigan and others cap how fast taxable value can rise for a current owner, then reset it to purchase price when the home sells. So the seller may have paid $3,000 and you will pay $9,000 on the same house. Ask the assessor for a post-sale estimate before you buy.</p>
+<h2>Exemptions</h2>
+<p>Homestead (primary residence), senior, disabled-veteran and agricultural exemptions cut the taxable value or freeze it. Most must be applied for once, by a deadline (often March 1 or April 30). The medians here already include exemptions people claimed, which is one reason a new buyer's bill runs above the median.</p>
+<h2>When the number changes</h2>
+<p>Levies are set each year when local budgets pass; assessments update on a cycle (annually in Texas and Florida, every three years in Cook County, up to eight in some Ohio counties). A notice of new assessed value arrives before the bill — that is the moment to <a href="{{ base }}guide/appeal/">appeal</a>.</p>
+</div>
+{% endblock %}

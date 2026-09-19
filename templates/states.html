@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Property tax rates by state, ranked — median effective rate and bill in all 50 states | {{ site }}{% endblock %}
+{% block description %}All 50 states, DC and Puerto Rico ranked by median effective property tax rate, with the median annual bill and home value behind each number.{% endblock %}
+{% block content %}
+<nav class="crumbs"><a href="{{ base }}">Home</a> › States</nav>
+<h1>Property tax rates by state</h1>
+<p class="prose">Ranked by the median effective rate homeowners pay. The U.S. median is {{ us.rate|pct }} ({{ us.tax_med|usd }} on a {{ us.home_med|usd }} home). Click a state for every county and its due dates.</p>
+<div class="ad-slot"><!-- ad: states --></div>
+<ul class="list fee">{% for s in state_list %}<li><a href="{{ base }}{{ s.path }}"><span class="nm">#{{ s.rank }} {{ s.name }}<small class="rule">median home {{ s.home_med|usd }} · {{ s.counties|length }} counties{% if s.rules %} · due {% for d in s.rules.due %}{{ d.due }}{% if not loop.last %} & {% endif %}{% endfor %}{% endif %}</small></span><span class="meta"><b>{{ s.rate|pct }}</b> · {{ s.tax_med|usd }}</span></a></li>{% endfor %}</ul>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ s.name }} property tax rates by county — {{ s.rate|pct }} state median, {{ s.counties|length }} counties, due dates | {{ site }}{% endblock %}
+{% block description %}Property tax in {{ s.name }}: median effective rate {{ s.rate|pct }} (#{{ s.rank }} of 52), median bill {{ s.tax_med|usd }} on a {{ s.home_med|usd }} home. Every county ranked, plus when {{ s.name }} property taxes are due.{% endblock %}
+{% block head %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the property tax rate in {{ s.name }}?","acceptedAnswer":{"@type":"Answer","text":"The median effective property tax rate in {{ s.name }} is {{ s.rate|pct }} of home value ({{ s.tax_med|usd }} a year on a median {{ s.home_med|usd }} home), ranking #{{ s.rank }} of the 50 states plus DC and Puerto Rico. County rates range from {{ (s.counties|selectattr('rate')|map(attribute='rate')|list|min)|pct }} to {{ (s.counties|selectattr('rate')|map(attribute='rate')|list|max)|pct }}."}}{% if s.rules %},{"@type":"Question","name":"When are property taxes due in {{ s.name }}?","acceptedAnswer":{"@type":"Answer","text":"{% for d in s.rules.due %}{{ d.label }}: {{ d.due }}{% if not loop.last %}; {% endif %}{% endfor %}. {{ s.rules.penalty }}"}}{% endif %}]}</script>{% endblock %}
+{% block content %}
+<nav class="crumbs"><a href="{{ base }}">Home</a> › <a href="{{ base }}states/">States</a> › {{ s.name }}</nav>
+<h1>{{ s.name }} property tax rates by county</h1>
+<section class="sheet {{ 'severe' if s.ratio_us and s.ratio_us >= 1.5 else ('mild' if s.ratio_us and s.ratio_us > 1.1 else 'balanced') }}">
+  <p class="sheet-label">{{ s.name }} · #{{ s.rank }} of 52 · {{ s.counties|length }} counties</p>
+  <div class="sheet-num"><span class="num">{{ s.rate|pct }}</span><span class="pct">state median</span></div>
+  <p class="sheet-title">Median bill {{ s.tax_med|usd }} a year on a {{ s.home_med|usd }} home</p>
+  <p class="sheet-text">{{ 'Higher' if s.ratio_us > 1 else 'Lower' }} than the U.S. median {{ us.rate|pct }}. {% if s.rules %}{% for d in s.rules.due %}{{ d.label }} due {{ d.due }}{% if not loop.last %}, {% endif %}{% endfor %}.{% endif %}</p>
+</section>
+<div class="ad-slot"><!-- ad: state --></div>
+{% if s.rules %}
+<div class="sec"><div class="sec-h"><h2>Due dates & penalties</h2><a href="{{ base }}guide/due-dates/">All states</a></div>
+<table class="tbl spec"><tbody>
+{% for d in s.rules.due %}<tr><th>{{ d.label }}</th><td>{{ d.due }}{% if d.delinquent %} <span class="muted">· delinquent {{ d.delinquent }}</span>{% endif %}</td></tr>{% endfor %}
+{% if s.rules.penalty %}<tr><th>Late penalty</th><td>{{ s.rules.penalty }}</td></tr>{% endif %}
+{% if s.rules.discount and s.rules.discount != 'none' %}<tr><th>Early-payment discount</th><td>{{ s.rules.discount }}</td></tr>{% endif %}
+{% if s.rules.appeal_window %}<tr><th>Appeal window</th><td>{{ s.rules.appeal_window }}</td></tr>{% endif %}
+</tbody></table>
+<p class="muted small">{{ s.rules.note }} Source: <a href="{{ s.rules.source_url }}" rel="noopener">{{ s.rules.statute or s.rules.source_url }}</a> (checked {{ s.rules.verified }}).</p></div>
+{% endif %}
+<div class="sec"><div class="sec-h"><h2>Counties, highest rate first</h2></div>
+<ul class="list fee">{% for c in s.counties %}<li><a href="{{ base }}{{ c.path }}"><span class="nm">{{ c.name }}<small class="rule">median home {{ c.home_med|usd }}{% if c.population %} · pop. {{ '{:,}'.format(c.population) }}{% endif %}</small></span><span class="meta"><b>{{ c.rate|pct }}</b> · {{ c.tax_med|usd }}{% if c.topcoded %} or less{% endif %}</span></a></li>{% endfor %}</ul></div>
+<p class="muted small">Effective rate = median real estate taxes paid ÷ median home value, ACS {{ source.vintage }} 5-year. Counties where the Census tops the tax at $200 show "or less".</p>
+{% endblock %}
