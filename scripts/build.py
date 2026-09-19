@@ -27,6 +27,25 @@ def usd(n, dec=0):
     return f"${n:,.{dec}f}"
 
 
+def tax_amount(n):
+    """Census topcodes/bottomcodes shown as the range they are, never as a figure."""
+    if n == 199:
+        return "Less than $200"
+    if n == 10001:
+        return "$10,000 or more"
+    return usd(n)
+
+
+def relative_to(rate, benchmark):
+    """'Above'/'Below' only when the two differ at the displayed precision (2 decimals); the same rule on home (app.js) and county pages."""
+    if rate is None or benchmark is None:
+        return ""
+    shown = lambda x: math.floor(x * 100 + 0.5)
+    if shown(rate) == shown(benchmark):
+        return "About the same as"
+    return "Above" if rate > benchmark else "Below"
+
+
 def pct(n):
     return "—" if n is None else f"{n:.2f}%"
 
@@ -88,6 +107,8 @@ def main():
     v = h.hexdigest()[:8]
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
     env.filters["usd"] = usd
+    env.filters["tax_amount"] = tax_amount
+    env.filters["relative_to"] = relative_to
     env.filters["pct"] = pct
     env.filters["mmdd"] = mmdd
     env.globals["STATE_NAMES"] = {st: s["name"] for st, s in states.items()}
@@ -98,9 +119,9 @@ def main():
         shutil.rmtree(DIST)
     DIST.mkdir()
     shutil.copytree(ROOT / "static", DIST / "static")
-    # search index: [name, st, slug, rate (unrounded), tax_label, home_label, pop]
-    items = [[c["name"], c["st"], c["slug"], c["rate"], c["tax_label"], c["home_label"], c["population"]] for c in counties]
-    items += [[s["name"], s["st"], "", s["rate"], usd(s["tax_med"]), usd(s["home_med"]), s["population"]] for s in states.values()]
+    # search index: [name, st, slug, rate (unrounded), tax_label, home_label, pop, rate_status (ok|bounded|missing)]
+    items = [[c["name"], c["st"], c["slug"], c["rate"], c["tax_label"], c["home_label"], c["population"], c.get("rate_status") or ("ok" if c["rate"] else "missing")] for c in counties]
+    items += [[s["name"], s["st"], "", s["rate"], usd(s["tax_med"]), usd(s["home_med"]), s["population"], "ok" if s["rate"] else "missing"] for s in states.values()]
     (DIST / "static/index.json").write_text(json.dumps({"us": [us["rate"], us["tax_med"], us["home_med"]], "states": {st: s["name"] for st, s in states.items()}, "items": items}, separators=(",", ":")))
 
     urls = []
@@ -128,7 +149,7 @@ def main():
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
-        sm.append(f"<url><loc>{origin}{base}{u}</loc><lastmod>{today.isoformat()}</lastmod></url>")
+        sm.append(f"<url><loc>{origin}{base}{u}</loc></url>")  # no lastmod: a rebuild is not a content change
     sm.append("</urlset>")
     (DIST / "sitemap.xml").write_text("\n".join(sm))
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {origin}{base}sitemap.xml\n")

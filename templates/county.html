@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}{{ c.name }}, {{ c.st }} property tax rate{% if c.rate %} {{ c.rate|pct }}{% endif %} — median tax {{ c.tax_label }}, estimate & due dates | {{ site }}{% endblock %}
-{% block description %}{% if c.rate %}{{ c.name }}, {{ s.name }}: property tax benchmark {{ c.rate|pct }} of home value (median annual tax {{ c.tax_label }} ÷ median home value {{ c.home_label }}, ACS {{ source.vintage }}), {{ 'above' if c.ratio_us > 1 else 'below' }} the U.S. {{ us.rate|pct }}. Rank {{ c.rank_state }} of {{ c.n_state }} in {{ s.name }}. Estimate your bill and see payment guidance.{% else %}Property tax information for {{ c.name }}, {{ s.name }}: median annual tax {{ c.tax_label }}, median home value {{ c.home_label }} (ACS {{ source.vintage }}). A precise rate is unavailable because the Census reports a range; payment guidance for {{ s.name }} included.{% endif %}{% endblock %}
-{% block head %}<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"Dataset","name":c.name ~ ", " ~ c.st ~ " property tax benchmark","description":"CountyTax derived benchmark: median real estate taxes paid divided by median owner-occupied home value, from U.S. Census Bureau ACS " ~ source.vintage ~ " 5-year tables B25103 and B25077","spatialCoverage":c.name ~ ", " ~ s.name,"isBasedOn":"https://www.census.gov/programs-surveys/acs","creator":{"@type":"Organization","name":site},"license":"https://www.usa.gov/government-works","url":origin ~ base ~ path}|tojson }}</script>{% endblock %}
+{% block title %}{{ c.name }}, {{ c.st }} Property Tax{% if c.rate %}: {{ c.rate|pct }} Benchmark{% endif %} | {{ site }}{% endblock %}
+{% block description %}{% if c.rate %}{{ c.name }}, {{ s.name }}: {{ c.rate|pct }} property tax benchmark from ACS {{ source.vintage }}. Estimate annual and monthly costs from your home value and find payment guidance.{% else %}{{ c.name }}, {{ s.name }}: median annual tax {{ c.tax_label }}, median home value {{ c.home_label }} (ACS {{ source.vintage }}). {% if c.rate_status == 'missing' %}The Census does not publish all figures needed to calculate this benchmark.{% else %}The Census reports a range for at least one required figure, so an exact benchmark is unavailable.{% endif %} Payment guidance for {{ s.name }} included.{% endif %}{% endblock %}
+{% block head %}<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"Dataset","name":c.name ~ ", " ~ c.st ~ " property tax benchmark","description":"CountyTax derived benchmark: median real estate taxes paid divided by median owner-occupied home value, from U.S. Census Bureau ACS " ~ source.vintage ~ " 5-year tables B25103 and B25077","spatialCoverage":c.name ~ ", " ~ s.name,"isBasedOn":source.url,"temporalCoverage":source.vintage.replace("–", "/"),"creator":{"@type":"Organization","name":site},"license":"https://www.usa.gov/government-works","url":origin ~ base ~ path}|tojson }}</script>{% endblock %}
 {% block content %}
 <nav class="crumbs"><a href="{{ base }}">Home</a> › <a href="{{ base }}{{ s.path }}">{{ s.name }}</a> › {{ c.name }}</nav>
 <h1>{{ c.name }}, {{ c.st }} property tax rate</h1>
@@ -10,21 +10,23 @@
   {% if c.rate %}
   <div class="sheet-num"><span class="num">{{ c.rate|pct }}</span><span class="pct">of home value</span></div>
   <p class="sheet-title">Median annual property tax {{ c.tax_label }} · median home value {{ c.home_label }}</p>
-  <p class="sheet-text">{{ 'Above' if c.ratio_us > 1 else 'Below' }} the U.S. benchmark {{ us.rate|pct }} ({{ c.ratio_us }}×){% if c.ratio_state %}, {{ 'above' if c.ratio_state > 1 else 'below' }} the {{ s.name }} benchmark {{ s.rate|pct }}{% endif %}. Area benchmark: median tax paid ÷ median owner-occupied home value, ACS {{ source.vintage }} — a ratio of two medians, not a statutory rate or the median of individual bills.</p>
   <label class="field" style="margin-top:14px">Your home value
     <div class="money"><span class="unit">$</span><input id="val" class="num-in" type="text" inputmode="decimal" value="{{ '{:,}'.format(c.home_med) }}" aria-describedby="est"></div>
   </label>
-  <p id="est" class="sheet-text"><b id="est-year">{{ (c.home_med * c.rate / 100)|usd }}</b> a year · <span id="est-month">{{ (c.home_med * c.rate / 100 / 12)|usd }}</span> a month using the area benchmark. <span id="est-err" class="muted" hidden>Enter a value such as 350,000 or 350,000.00.</span></p>
-  <p class="muted small">For a rough budget only. Exemptions people already claim are reflected in the survey; your bill depends on taxable value, local districts, exemptions and reassessment after a sale.</p>
+  <p id="est" class="sheet-text" role="status" aria-live="polite" aria-atomic="true"><b id="est-year">{{ (c.home_med * c.rate / 100)|usd }}</b> a year · <span id="est-month">{{ (c.home_med * c.rate / 100 / 12)|usd }}</span> a month using the area benchmark. <span id="est-err" class="muted" hidden>Enter a value such as 350,000 or 350,000.00.</span></p>
+  <p class="muted small">A rough planning estimate, not a tax quote.</p>
+  <p class="sheet-text">{{ c.rate|relative_to(us.rate) }} the U.S. benchmark {{ us.rate|pct }}{% if c.ratio_us %} ({{ c.ratio_us }}×){% endif %}{% if s.rate %}, {{ (c.rate|relative_to(s.rate))|lower }} the {{ s.name }} benchmark {{ s.rate|pct }}{% endif %}.</p>
+  {% if c.rank_state %}<p class="muted small">Ranked among {{ c.n_state }} {{ s.name }} counties with available benchmarks{% if s.counties|length - c.n_state > 0 %}; {{ s.counties|length - c.n_state }} {{ 'county is' if s.counties|length - c.n_state == 1 else 'counties are' }} not ranked because required figures are missing or reported as ranges{% endif %}.</p>{% endif %}
+  <details class="src"><summary>What this benchmark means</summary><p class="sheet-text">Median real estate taxes paid ÷ median owner-occupied home value, ACS {{ source.vintage }} — a ratio of two medians, not a statutory rate, not the median of individual bills and not your property's rate. Exemptions people already claim are reflected in the survey; your bill depends on taxable value, local districts, exemptions and reassessment after a sale.</p></details>
   {% else %}
   <div class="sheet-num"><span class="num small-num">{{ c.tax_label|capitalize }}</span></div>
   <p class="sheet-title">Median annual property tax · median home value {{ c.home_label }}</p>
-  <p class="sheet-text">The Census reports a range rather than a figure here, so a precise rate, estimate and ranking are unavailable. Payment guidance for {{ s.name }} is below.</p>
+  <p class="sheet-text">{% if c.rate_status == 'missing' %}The Census does not publish all figures needed to calculate this benchmark.{% else %}The Census reports a range for at least one required figure, so an exact benchmark is unavailable.{% endif %} No estimate or ranking is shown. Payment guidance for {{ s.name }} is below.</p>
   {% endif %}
   <details class="src" style="margin-top:14px"><summary>Census figures behind this page</summary>
   <table class="tbl spec mini"><tbody>
     <tr><th>Median real estate taxes paid</th><td>{{ c.tax_label }}</td></tr>
-    {% if c.tax_mortgage and not c.topcoded %}<tr><th>With a mortgage / without</th><td>{{ c.tax_mortgage|usd }} / {{ c.tax_nomortgage|usd }}</td></tr>{% endif %}
+    {% if c.tax_mortgage is not none or c.tax_nomortgage is not none %}<tr><th>With a mortgage / without</th><td>{{ c.tax_mortgage|tax_amount }} / {{ c.tax_nomortgage|tax_amount }}</td></tr>{% endif %}
     <tr><th>Median home value</th><td>{{ c.home_label }}</td></tr>
     {% if c.income_med %}<tr><th>Median household income</th><td>{{ c.income_med|usd }}{% if c.tax_med and not c.topcoded %} · tax is {{ (c.tax_med / c.income_med * 100)|round(1) }}% of it{% endif %}</td></tr>{% endif %}
     {% if c.rent_med %}<tr><th>Median gross rent</th><td>{{ c.rent_med|usd }} / mo</td></tr>{% endif %}

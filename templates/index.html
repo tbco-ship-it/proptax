@@ -5,8 +5,9 @@
 {% block content %}
 <div class="stage" id="stage">
 <section class="hero">
-  <h1>What's the property tax rate in my county?</h1>
-  <p>Type a county or state. You get the area's property tax benchmark — median tax paid as a share of median home value — a planning estimate for your own home, and when the bill is due in your state. {{ '{:,}'.format(n_counties) }} counties and county equivalents, Census data, no sign-up.</p>
+  <h1>Property tax, by county.</h1>
+  <p>Find your county's tax benchmark and estimate your annual bill.</p>
+  <p class="muted small">{{ '{:,}'.format(n_counties) }} counties and county equivalents · ACS {{ source.vintage }}</p>
 </section>
 
 <section class="calc-grid">
@@ -17,7 +18,8 @@
   </div>
   <p id="search-status" role="status" class="muted small" hidden></p>
   <label class="field">Home value <span class="muted small">(optional — for your estimate)</span>
-    <div class="money"><span class="unit">$</span><input id="val" class="num-in" type="text" inputmode="decimal" placeholder="350,000"></div>
+    <div class="money"><span class="unit">$</span><input id="val" class="num-in" type="text" inputmode="decimal" placeholder="350,000" aria-describedby="value-error"></div>
+    <p id="value-error" class="small" hidden>Enter a positive home value, such as 350,000 or 350,000.00.</p>
   </label>
   <p class="muted small">Estimate = home value × the area benchmark. For a rough budget only; your bill depends on taxable value, districts and exemptions. <a href="{{ base }}states/">Browse all states</a></p>
   <button type="button" class="last" id="last" hidden><span>Last county</span><b id="last-name"></b></button>

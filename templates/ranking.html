@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block title %}{{ title }} — {{ rows|length }} U.S. counties (population {{ '{:,}'.format(MIN_POP_RANK) }}+) | {{ site }}{% endblock %}
-{% block description %}{{ title }}, ranked by median effective rate from Census ACS data. Counties under {{ '{:,}'.format(MIN_POP_RANK) }} people are left out so a handful of survey responses can't swing the list.{% endblock %}
+{% block description %}{{ title }}, ranked by median annual property taxes divided by median home value from Census ACS data. Counties under {{ '{:,}'.format(MIN_POP_RANK) }} people are left out so a handful of survey responses can't swing the list.{% endblock %}
 {% block content %}
 <nav class="crumbs"><a href="{{ base }}">Home</a> › Rankings › {{ 'Highest' if kind == 'highest' else 'Lowest' }}</nav>
 <h1>{{ title }}</h1>
-<p class="prose">{{ rows|length }} counties with at least {{ '{:,}'.format(MIN_POP_RANK) }} residents. U.S. benchmark {{ us.rate|pct }}. See the <a href="{{ base }}rankings/{{ 'lowest' if kind == 'highest' else 'highest' }}/">{{ 'lowest' if kind == 'highest' else 'highest' }} rates</a> or <a href="{{ base }}states/">compare states</a>.</p>
+<p class="prose">{{ rows|length }} counties with at least {{ '{:,}'.format(MIN_POP_RANK) }} residents. This ranking excludes smaller counties and counties with missing or range-reported figures — it is not a complete ranking of all U.S. counties. U.S. benchmark {{ us.rate|pct }}. See the <a href="{{ base }}rankings/{{ 'lowest' if kind == 'highest' else 'highest' }}/">{{ 'lowest' if kind == 'highest' else 'highest' }} rates</a> or <a href="{{ base }}states/">compare states</a>.</p>
 <div class="ad-slot"><!-- ad: ranking --></div>
 <ul class="list fee">{% for c in rows %}<li><a href="{{ base }}{{ c.path }}"><span class="nm">#{{ loop.index }} {{ c.name }}, {{ c.st }}<small class="rule">median home {{ c.home_med|usd }} · pop. {{ '{:,}'.format(c.population) }}</small></span><span class="meta"><b>{{ c.rate|pct }}</b><small>{{ c.tax_label }} / year</small></span></a></li>{% endfor %}</ul>
 {% endblock %}

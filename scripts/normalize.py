@@ -62,6 +62,7 @@ def main():
         v["tax_bound"] = "lt200" if tax == 199 else ("ge10000" if tax == 10001 else None)
         v["home_bound"] = "ge2m" if home == 2000001 else None
         v["rate"] = (tax / home * 100) if (tax is not None and home and not v["tax_bound"] and not v["home_bound"]) else None
+        v["rate_status"] = "bounded" if (v["tax_bound"] or v["home_bound"]) else ("missing" if v["rate"] is None else "ok")
         if g.startswith("0500000US"):
             st = STATES.get(fips[:2])
             if not st:

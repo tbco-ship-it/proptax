@@ -655,3 +655,13 @@ header.top nav a{flex:none}
 .sheet.quiet{background:var(--surface);background-image:none}
 details.src summary{cursor:pointer;color:var(--text-2);font-weight:600;font-size:.92rem}
 @media (max-width:430px){.list.fee a{grid-template-columns:minmax(0,1fr) minmax(96px,120px)}.list.fee .meta{white-space:normal}}
+/* Review R2 2026-09-19: accessible link/CTA colours, invalid input, county filter */
+:root{--link:#1b64da;--cta:#1b64da;--cta-hover:#1558c0}
+@media (prefers-color-scheme:dark){:root{--link:#8ab8ff}}
+a{color:var(--link)}
+.next:first-child:not(:only-child),.next:only-child{background:var(--cta);color:#fff}
+.next:first-child:not(:only-child):hover,.next:only-child:hover{background:var(--cta-hover);color:#fff}
+.money:focus-within,.pick:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+.num-in[aria-invalid="true"]{border-color:#d92d20}
+#value-error{color:#b42318;margin:6px 0 0}
+#county-filter{margin:6px 0 4px}

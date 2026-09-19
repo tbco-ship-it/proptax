@@ -8,11 +8,15 @@
   <p class="sheet-label">{{ s.name }} · #{{ s.rank }} of 52 · {{ s.counties|length }} counties</p>
   <div class="sheet-num"><span class="num">{{ s.rate|pct }}</span><span class="pct">state benchmark</span></div>
   <p class="sheet-title">Median annual property tax {{ s.tax_med|usd }} · median home value {{ s.home_med|usd }}</p>
-  <p class="sheet-text">{{ 'Above' if s.ratio_us > 1 else 'Below' }} the U.S. benchmark {{ us.rate|pct }}. {% if s.rules and s.rules.due %}{% for d in s.rules.due %}{{ d.label }} due {{ d.due|mmdd }}{% if not loop.last %}, {% endif %}{% endfor %}.{% elif s.rules %}Payment dates are set locally — see below.{% endif %}</p>
+  <p class="sheet-text">{{ s.rate|relative_to(us.rate) }} the U.S. benchmark {{ us.rate|pct }}. {% if s.rules and s.rules.due %}{% for d in s.rules.due %}{{ d.label }} due {{ d.due|mmdd }}{% if not loop.last %}, {% endif %}{% endfor %}.{% elif s.rules %}Payment dates are set locally — see below.{% endif %}</p>
 </section>
 <div class="ad-slot"><!-- ad: state --></div>
 {% include "_due.html" %}
 <div class="sec"><div class="sec-h"><h2>Counties, highest rate first</h2></div>
-<ul class="list fee">{% for c in s.counties %}<li><a href="{{ base }}{{ c.path }}"><span class="nm">{{ c.name }}<small class="rule">Median home value {{ c.home_label }}</small></span><span class="meta"><b>{{ c.rate|pct }}</b><small>{{ c.tax_label }} / year</small></span></a></li>{% endfor %}</ul></div>
+<label for="county-filter" class="muted small">Find a county in this state</label>
+<input id="county-filter" class="pick" type="search" autocomplete="off" placeholder="County name">
+<p id="county-count" class="muted small" role="status"></p>
+<ul class="list fee" id="county-list">{% for c in s.counties %}<li><a href="{{ base }}{{ c.path }}"><span class="nm">{{ c.name }}<small class="rule">Median home value {{ c.home_label }}</small></span><span class="meta"><b>{% if c.rate %}{{ c.rate|pct }}{% else %}Not ranked{% endif %}</b><small>{% if c.rate %}{{ c.tax_label }} / year{% else %}benchmark unavailable{% endif %}</small></span></a></li>{% endfor %}</ul></div>
+<script>(() => { const input = document.getElementById('county-filter'), count = document.getElementById('county-count'), rows = [...document.querySelectorAll('#county-list > li')]; const norm = s => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); input.addEventListener('input', () => { const q = norm(input.value.trim()); let n = 0; for (const row of rows) { row.hidden = !norm(row.querySelector('.nm').firstChild.textContent).includes(q); if (!row.hidden) n++; } count.textContent = q ? `${n} of ${rows.length} counties shown` : ''; }); })();</script>
 <p class="muted small">Benchmark = median real estate taxes paid ÷ median home value, ACS {{ source.vintage }} 5-year. Counties where the Census reports a range ("less than $200", "$10,000 or more") get no rate.</p>
 {% endblock %}
