@@ -1,0 +1,1088 @@
+[
+ {
+  "state": "Alabama",
+  "code": "AL",
+  "tax_year_basis": "tax year Oct 1 - Sept 30, bills mailed Oct 1",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "12-31",
+    "delinquent": "01-01"
+   }
+  ],
+  "penalty": "1% per month interest (12% annually) plus $5 delinquent fee (Ala. Code § 40-1-44, § 40-5-9)",
+  "discount": "none",
+  "appeal_window": "within 30 days from date of notice of valuation to county Board of Equalization (Ala. Code § 40-3-20)",
+  "source_url": "https://www.revenue.alabama.gov/property-tax/",
+  "statute": "Ala. Code § 40-5-1, § 40-5-9",
+  "note": "Taxes are payable starting October 1 and become delinquent on January 1.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Alaska",
+  "code": "AK",
+  "tax_year_basis": "calendar tax year, local municipal assessment",
+  "installments": 0,
+  "due": [],
+  "penalty": "up to 10% penalty plus interest up to 15% per annum set by municipal ordinance (AS 29.45.250)",
+  "discount": "none (municipalities may vote prompt payment discount under AS 29.45.240)",
+  "appeal_window": "within 30 days after notice of assessment is mailed to local Board of Equalization (AS 29.45.190)",
+  "source_url": "https://www.commerce.alaska.gov/web/dcra/LocalGovernmentResourceDesk/PropertyTaxation.aspx",
+  "statute": "Alaska Stat. § 29.45.020, § 29.45.240",
+  "note": "county-set; no state property tax; municipal/borough option under AS 29.45.020. Typical: Anchorage due 06-15 and 08-15; Fairbanks due 09-01 and 11-01; Juneau due 09-30.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Arizona",
+  "code": "AZ",
+  "tax_year_basis": "calendar 2026, bills mailed Sept/Oct",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "10-01",
+    "delinquent": "11-01"
+   },
+   {
+    "label": "Second half",
+    "due": "03-01",
+    "delinquent": "05-01"
+   }
+  ],
+  "penalty": "16% per year simple interest pro-rated monthly until paid (A.R.S. § 42-18053)",
+  "discount": "none (paying full year by Dec 31 waives 1st half interest under A.R.S. § 42-18053)",
+  "appeal_window": "within 60 days of mailing date of valuation notice to county assessor (A.R.S. § 42-16051)",
+  "source_url": "https://www.azleg.gov/ars/42/18052.htm",
+  "statute": "A.R.S. § 42-18052, § 42-18053",
+  "note": "First half delinquent after 5:00 p.m. on November 1; second half delinquent after 5:00 p.m. on May 1. Full payment by Dec 31 waives first half delinquency interest.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Arkansas",
+  "code": "AR",
+  "tax_year_basis": "calendar 2026, bills mailed spring/summer",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Full payment",
+    "due": "10-15",
+    "delinquent": "10-16"
+   }
+  ],
+  "penalty": "10% penalty plus 10% interest per annum from delinquency date (Ark. Code Ann. § 26-36-201(c))",
+  "discount": "none",
+  "appeal_window": "county equalization board on or before August 1 or within 30 days of notice (Ark. Code Ann. § 26-27-317)",
+  "source_url": "https://www.dfa.arkansas.gov/",
+  "statute": "Ark. Code Ann. § 26-36-201",
+  "note": "Taxes payable between 1st business day in March and October 15. County option permits 3 elective installments (April, July, Oct 15).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "California",
+  "code": "CA",
+  "tax_year_basis": "fiscal year July 1 - June 30, bills mailed Oct/Nov",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First installment",
+    "due": "11-01",
+    "delinquent": "12-10"
+   },
+   {
+    "label": "Second installment",
+    "due": "02-01",
+    "delinquent": "04-10"
+   }
+  ],
+  "penalty": "10% penalty on 1st installment after Dec 10 5pm; 10% penalty plus $10 cost on 2nd installment after Apr 10 5pm; 1.5%/month redemption fee after June 30 (Cal. Rev. & Tax. Code §§ 2617, 2618, 4103)",
+  "discount": "none",
+  "appeal_window": "July 2 to September 15 (or November 30 depending on county notification) to Assessment Appeals Board (Cal. Rev. & Tax. Code § 1603)",
+  "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=2605.&lawCode=RTC",
+  "statute": "Cal. Rev. & Tax. Code §§ 2605, 2607, 2617, 2618",
+  "note": "First installment delinquent after 5:00 p.m. Dec 10; second installment delinquent after 5:00 p.m. Apr 10. Default date June 30.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Colorado",
+  "code": "CO",
+  "tax_year_basis": "calendar 2026, bills mailed January",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "02-28",
+    "delinquent": "03-01"
+   },
+   {
+    "label": "Second half",
+    "due": "06-15",
+    "delinquent": "06-16"
+   }
+  ],
+  "penalty": "1% per month interest beginning on day following delinquency date (C.R.S. § 39-10-104.5(3))",
+  "discount": "none (single full payment option due 04-30 without penalty)",
+  "appeal_window": "protest to county assessor by June 8 for real property (C.R.S. § 39-5-122)",
+  "source_url": "https://cdola.colorado.gov/property-taxation",
+  "statute": "C.R.S. § 39-10-104.5",
+  "note": "Taxpayers may pay in 2 halves (last day of Feb and June 15) or in one full payment on or before April 30.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Connecticut",
+  "code": "CT",
+  "tax_year_basis": "assessment year Oct 1, bills mailed late June",
+  "installments": 0,
+  "due": [],
+  "penalty": "1.5% per month (18% annually) calculated from the due date (C.G.S. § 12-146)",
+  "discount": "none",
+  "appeal_window": "file with Board of Assessment Appeals on or before February 20 (C.G.S. § 12-111)",
+  "source_url": "https://www.cga.ct.gov/current/pub/chap_204.htm#sec_12-142",
+  "statute": "Conn. Gen. Stat. § 12-142, § 12-144, § 12-146",
+  "note": "county/municipal-set; statutory default under C.G.S. § 12-142 is semi-annual due July 1 and January 1, with a 30-day grace period (delinquent Aug 2 and Feb 2). Some towns use single payment in July or quarterly.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Delaware",
+  "code": "DE",
+  "tax_year_basis": "tax year July 1 - June 30, bills mailed July",
+  "installments": 0,
+  "due": [],
+  "penalty": "New Castle: 6% penalty on Oct 1 + 1%/month; Kent & Sussex: 1.5% per month (9 Del. C. § 8604)",
+  "discount": "none",
+  "appeal_window": "New Castle County: by March 15; Kent County: by April 15; Sussex County: by February 15 (9 Del. C. § 8311)",
+  "source_url": "https://delcode.delaware.gov/title9/c086/index.html",
+  "statute": "9 Del. C. § 8604",
+  "note": "county-set; Delaware has 3 counties, all with annual payment due September 30 (delinquent October 1). New Castle adds 6% penalty on Oct 1 plus 1%/month; Kent/Sussex add 1.5%/month.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "District of Columbia",
+  "code": "DC",
+  "tax_year_basis": "fiscal year Oct 1 - Sept 30, bills mailed Feb & Aug",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "03-31",
+    "delinquent": "04-01"
+   },
+   {
+    "label": "Second half",
+    "due": "09-15",
+    "delinquent": "09-16"
+   }
+  ],
+  "penalty": "10% penalty on delinquent balance plus 1% per month (12% annually) interest (D.C. Code § 47-811(c))",
+  "discount": "none",
+  "appeal_window": "file appeal with Real Property Tax Appeals Commission (RPTAC) by April 1 following assessment notice (D.C. Code § 47-825.01a)",
+  "source_url": "https://code.dccouncil.gov/us/dc/council/code/sections/47-811",
+  "statute": "D.C. Code § 47-811",
+  "note": "Real property taxes are billed semi-annually, due March 31 and September 15.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Florida",
+  "code": "FL",
+  "tax_year_basis": "calendar 2026, bills mailed Nov 1",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "03-31",
+    "delinquent": "04-01"
+   }
+  ],
+  "penalty": "3% minimum penalty after April 1, advertised for tax certificate sale on or before June 1 (Fla. Stat. § 197.162, § 197.432)",
+  "discount": "4% in Nov, 3% in Dec, 2% in Jan, 1% in Feb (Fla. Stat. § 197.162)",
+  "appeal_window": "petition Value Adjustment Board (VAB) within 25 days of TRIM notice mailing (typically mid-September) (Fla. Stat. § 194.011)",
+  "source_url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0100-0199/0197/Sections/0197.162.html",
+  "statute": "Fla. Stat. § 197.162, § 197.322",
+  "note": "Taxes payable Nov 1; early payment discounts: Nov 4%, Dec 3%, Jan 2%, Feb 1%, gross due March 31, delinquent April 1. Quarterly payment plan available upon application.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Georgia",
+  "code": "GA",
+  "tax_year_basis": "calendar 2026, bills mailed summer/fall",
+  "installments": 0,
+  "due": [],
+  "penalty": "5% penalty after 120 days plus additional 5% every 120 days up to 20% max (O.C.G.A. § 48-2-44) plus monthly interest at bank prime rate + 3%",
+  "discount": "none",
+  "appeal_window": "within 45 days of the date of the assessment notice to county board of tax assessors (O.C.G.A. § 48-5-311)",
+  "source_url": "https://dor.georgia.gov/",
+  "statute": "O.C.G.A. § 48-5-23, § 48-5-311",
+  "note": "county-set; statewide default is Dec 20 under O.C.G.A. § 48-5-23, but counties commonly establish earlier dates: Fulton Oct 15/Nov 15, Gwinnett Oct 15, Cobb Oct 15, DeKalb Sept 30/Nov 15.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Hawaii",
+  "code": "HI",
+  "tax_year_basis": "fiscal year July 1 - June 30, bills mailed July & Jan",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "08-20",
+    "delinquent": "08-21"
+   },
+   {
+    "label": "Second half",
+    "due": "02-20",
+    "delinquent": "02-21"
+   }
+  ],
+  "penalty": "10% penalty plus 1% per month interest (12% annually) (Honolulu ROH § 8-3.2, Maui County Code § 3.48.220)",
+  "discount": "none",
+  "appeal_window": "Honolulu: on or before January 15; Maui: on or before April 9; Hawaii County: on or before April 9 to Board of Review",
+  "source_url": "https://www.honolulupropertytax.com",
+  "statute": "Haw. Rev. Stat. § 246-48",
+  "note": "Administered entirely by 4 counties (Honolulu, Maui, Hawaii, Kauai). All four counties set due dates on August 20 and February 20.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Idaho",
+  "code": "ID",
+  "tax_year_basis": "calendar 2026, bills mailed November",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "12-20",
+    "delinquent": "12-21"
+   },
+   {
+    "label": "Second half",
+    "due": "06-20",
+    "delinquent": "06-21"
+   }
+  ],
+  "penalty": "2% late penalty immediately upon delinquency plus 1% per month interest (Idaho Code § 63-903, § 63-1001)",
+  "discount": "none",
+  "appeal_window": "fourth Monday of June to County Board of Equalization (Idaho Code § 63-501)",
+  "source_url": "https://tax.idaho.gov/",
+  "statute": "Idaho Code § 63-902, § 63-903",
+  "note": "First half due December 20, delinquent December 21. Second half due June 20, delinquent June 21.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Illinois",
+  "code": "IL",
+  "tax_year_basis": "prior year assessment, bills mailed winter & summer",
+  "installments": 0,
+  "due": [],
+  "penalty": "1.5% interest per month on delinquent amounts (35 ILCS 200/21-15, 21-20)",
+  "discount": "none",
+  "appeal_window": "within 30 days of assessment publication with county Board of Review (35 ILCS 200/16-55)",
+  "source_url": "https://tax.illinois.gov/",
+  "statute": "35 ILCS 200/21-15, 21-20",
+  "note": "county-set; dual statutory system under 35 ILCS 200/21-15: Cook County 1st installment due March 1 and 2nd installment due August 1 (or 30 days post-mailing); other 101 counties typically due June 1 and September 1.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Indiana",
+  "code": "IN",
+  "tax_year_basis": "prior year assessment, TS-1 bills mailed April",
+  "installments": 2,
+  "due": [
+   {
+    "label": "Spring installment",
+    "due": "05-10",
+    "delinquent": "05-11"
+   },
+   {
+    "label": "Fall installment",
+    "due": "11-10",
+    "delinquent": "11-11"
+   }
+  ],
+  "penalty": "5% penalty if paid within 30 days of due date (if no prior delinquency), otherwise 10% penalty (Ind. Code § 6-1.1-37-10)",
+  "discount": "none",
+  "appeal_window": "earlier of June 15 or 45 days after Form 11 notice mailed to Property Tax Assessment Board of Appeals (Ind. Code § 6-1.1-15-1.1)",
+  "source_url": "http://iga.in.gov/legislative/laws/2023/ic/titles/006#6-1.1-22-9",
+  "statute": "Ind. Code § 6-1.1-22-9",
+  "note": "Uniform statewide property tax due dates: May 10 and November 10.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Iowa",
+  "code": "IA",
+  "tax_year_basis": "fiscal year July 1 - June 30, bills mailed August",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "09-30",
+    "delinquent": "10-01"
+   },
+   {
+    "label": "Second half",
+    "due": "03-31",
+    "delinquent": "04-01"
+   }
+  ],
+  "penalty": "1.5% per month interest (18% annually) calculated to the nearest whole dollar (Iowa Code § 445.39)",
+  "discount": "none",
+  "appeal_window": "April 2 to April 30 to local Board of Review (Iowa Code § 441.37)",
+  "source_url": "https://revenue.iowa.gov/property-tax",
+  "statute": "Iowa Code § 445.36, § 445.37, § 445.39",
+  "note": "Taxes payable in 2 equal installments: 1st half due September 30 (delinquent Oct 1), 2nd half due March 31 (delinquent Apr 1).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Kansas",
+  "code": "KS",
+  "tax_year_basis": "calendar 2026, bills mailed Nov 1",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "12-20",
+    "delinquent": "12-21"
+   },
+   {
+    "label": "Second half",
+    "due": "05-10",
+    "delinquent": "05-11"
+   }
+  ],
+  "penalty": "statutory interest rate set annually under K.S.A. 79-2968 (typically 10-12% per annum) running from date of delinquency",
+  "discount": "none",
+  "appeal_window": "within 30 days of valuation notice mailing (mailed around March 1) to county appraiser (K.S.A. 79-1448)",
+  "source_url": "http://www.ksrevisor.org/statutes/chapters/ch79/079_020_0004.html",
+  "statute": "K.S.A. 79-2004",
+  "note": "First half due December 20 (delinquent Dec 21); second half due May 10 of following year (delinquent May 11).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Kentucky",
+  "code": "KY",
+  "tax_year_basis": "calendar 2026, bills mailed Oct/Nov",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "12-31",
+    "delinquent": "01-01"
+   }
+  ],
+  "penalty": "5% penalty Jan 1-31; 21% penalty on Feb 1 (10% penalty + 10% sheriff collection fee + 1%/month interest under KRS 134.119)",
+  "discount": "2% discount if paid on or before November 30 (KRS 134.015)",
+  "appeal_window": "first Monday in May for 13 days (open inspection period) with county PVA / board of assessment appeals (KRS 133.120)",
+  "source_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=43048",
+  "statute": "KRS 134.015, KRS 134.119",
+  "note": "2% discount if paid by Nov 30; face amount due Dec 1-31; 5% penalty in Jan; 21% penalty starting Feb 1.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Louisiana",
+  "code": "LA",
+  "tax_year_basis": "calendar 2026, bills mailed November",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "12-31",
+    "delinquent": "01-01"
+   }
+  ],
+  "penalty": "1% per month interest (12% annually) from delinquency date plus 10% collection attorney fee (La. R.S. 47:2124)",
+  "discount": "none",
+  "appeal_window": "within 15 calendar days of public exposure of assessment rolls (typically mid-August) to parish Board of Review (La. R.S. 47:1992)",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=631980",
+  "statute": "La. R.S. 47:2124",
+  "note": "Ad valorem taxes are due on receipt of bill and delinquent after December 31.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Maine",
+  "code": "ME",
+  "tax_year_basis": "property tax year April 1 - March 31, bills mailed summer",
+  "installments": 0,
+  "due": [],
+  "penalty": "interest rate fixed by municipality at annual town meeting, not to exceed state treasurer cap (typically 8-9% per year under 36 M.R.S. § 505(4))",
+  "discount": "municipalities may vote discount up to 10% for prompt payment (36 M.R.S. § 505(3))",
+  "appeal_window": "within 185 days after date of commitment of taxes to local assessors (36 M.R.S. § 841)",
+  "source_url": "https://legislature.maine.gov/statutes/36/title36sec505.html",
+  "statute": "36 M.R.S. § 505",
+  "note": "county/municipal-set; municipalities determine due dates and installments (commonly 1 payment in Sept/Oct or semi-annual in Sept/Oct and March/April).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Maryland",
+  "code": "MD",
+  "tax_year_basis": "fiscal year July 1 - June 30, bills mailed July 1",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "09-30",
+    "delinquent": "10-01"
+   },
+   {
+    "label": "Second half",
+    "due": "12-31",
+    "delinquent": "01-01"
+   }
+  ],
+  "penalty": "county-set interest and penalty, typically 1% to 1.5% per month interest plus up to 1% per month penalty (Md. Code, Tax-Prop. § 14-603, § 14-702)",
+  "discount": "counties may allow early payment discount (e.g. 0.5% in July) under Md. Code, Tax-Prop. § 10-205",
+  "appeal_window": "within 45 days of the date of notice of assessment to supervisor of assessments (Md. Code, Tax-Prop. § 14-502)",
+  "source_url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gtp&section=10-204.3",
+  "statute": "Md. Code, Tax-Prop. § 10-102, § 10-204.3",
+  "note": "Principal residences are automatically semi-annual: 1st half due Sept 30 (delinquent Oct 1), 2nd half due Dec 31 (delinquent Jan 1). Non-owner occupied properties due in full Sept 30.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Massachusetts",
+  "code": "MA",
+  "tax_year_basis": "fiscal year July 1 - June 30",
+  "installments": 0,
+  "due": [],
+  "penalty": "14% per annum interest from the due date until paid (M.G.L. c. 59, § 57)",
+  "discount": "none",
+  "appeal_window": "on or before the due date of actual tax bill (typically February 1) to local Board of Assessors (M.G.L. c. 59, § 59)",
+  "source_url": "https://www.mass.gov/orgs/division-of-local-services",
+  "statute": "M.G.L. c. 59, § 57, § 57C",
+  "note": "county/municipal-set; municipalities adopt either quarterly under M.G.L. c. 59 § 57C (Aug 1, Nov 1, Feb 1, May 1 - adopted by majority) or semi-annual under § 57 (Nov 1 and May 1).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Michigan",
+  "code": "MI",
+  "tax_year_basis": "calendar 2026, two seasonal collections (summer & winter)",
+  "installments": 2,
+  "due": [
+   {
+    "label": "Summer tax",
+    "due": "09-14",
+    "delinquent": "09-15"
+   },
+   {
+    "label": "Winter tax",
+    "due": "02-14",
+    "delinquent": "02-15"
+   }
+  ],
+  "penalty": "summer taxes incur 1% interest/mo after Sept 14; winter taxes incur 3% late penalty after Feb 14; on March 1, unpaid taxes go to county with 4% property tax administration fee + 1%/month interest (MCL 211.78a)",
+  "discount": "none",
+  "appeal_window": "March Board of Review (begins Tuesday after first Monday in March) (MCL 211.30); Michigan Tax Tribunal appeal by July 31",
+  "source_url": "https://www.michigan.gov/taxes/property-taxes",
+  "statute": "MCL 211.44, MCL 211.78a",
+  "note": "Two seasonal tax bills: Summer tax due July 1, payable through Sept 14 without penalty; Winter tax due Dec 1, payable through Feb 14 without penalty. Returned delinquent to county March 1.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Minnesota",
+  "code": "MN",
+  "tax_year_basis": "calendar 2026, bills mailed March/April",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "05-15",
+    "delinquent": "05-16"
+   },
+   {
+    "label": "Second half",
+    "due": "10-15",
+    "delinquent": "10-16"
+   }
+  ],
+  "penalty": "graduated statutory penalty schedule (e.g. homestead: 2% May 16-31, scaling to 10% by Dec 1) plus variable statutory interest starting Jan 1 (Minn. Stat. § 279.01, § 279.03)",
+  "discount": "none",
+  "appeal_window": "local Board of Appeal and Equalization in April/May, or file in Minnesota Tax Court on or before April 30 (Minn. Stat. § 278.01)",
+  "source_url": "https://www.revisor.mn.gov/statutes/cite/279.01",
+  "statute": "Minn. Stat. § 279.01",
+  "note": "First half due May 15 (delinquent May 16); second half due October 15 (delinquent Oct 16). Agricultural property 2nd half is due November 15.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Mississippi",
+  "code": "MS",
+  "tax_year_basis": "calendar 2026, bills mailed December",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "02-01",
+    "delinquent": "02-02"
+   }
+  ],
+  "penalty": "1% per month interest (12% annually) calculated from February 1 until paid (Miss. Code Ann. § 27-41-9)",
+  "discount": "none",
+  "appeal_window": "file written objection with county Board of Supervisors on or before first Monday in August (Miss. Code Ann. § 27-35-89)",
+  "source_url": "https://www.dor.ms.gov/",
+  "statute": "Miss. Code Ann. § 27-41-1, § 27-41-9",
+  "note": "Taxes due February 1. Taxpayer may elect to pay in 3 installments: 1/2 by Feb 1, 1/4 by May 1, 1/4 by Aug 1 (with 0.5%/month interest on deferred payments).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Missouri",
+  "code": "MO",
+  "tax_year_basis": "calendar 2026, bills mailed Nov",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "12-31",
+    "delinquent": "01-01"
+   }
+  ],
+  "penalty": "2% penalty for the first month, plus up to 2% per month thereafter (max 18%) plus 2% collector commission (Mo. Rev. Stat. § 140.100)",
+  "discount": "none",
+  "appeal_window": "second Monday in July to county Board of Equalization (Mo. Rev. Stat. § 137.275, § 137.385); State Tax Commission appeal by Sept 30",
+  "source_url": "https://stc.mo.gov/",
+  "statute": "Mo. Rev. Stat. § 140.010, § 140.100",
+  "note": "Taxes due upon receipt of bill and delinquent after December 31.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Montana",
+  "code": "MT",
+  "tax_year_basis": "calendar 2026, bills mailed October",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "11-30",
+    "delinquent": "12-01"
+   },
+   {
+    "label": "Second half",
+    "due": "05-31",
+    "delinquent": "06-01"
+   }
+  ],
+  "penalty": "2% penalty plus 5/6 of 1% per month (10% annually) interest until paid (Mont. Code Ann. § 15-16-101(2))",
+  "discount": "none",
+  "appeal_window": "within 30 days of mailing date on assessment notice to County Tax Appeal Board (Mont. Code Ann. § 15-15-102)",
+  "source_url": "https://leg.mt.gov/bills/mca/title_0150/chapter_0160/part_0010/section_0010/0150-0160-0010-0010.html",
+  "statute": "Mont. Code Ann. § 15-16-101",
+  "note": "First half due November 30 at 5:00 p.m. (delinquent Dec 1); second half due May 31 at 5:00 p.m. (delinquent June 1).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Nebraska",
+  "code": "NE",
+  "tax_year_basis": "calendar 2026, bills mailed December",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "04-30",
+    "delinquent": "05-01"
+   },
+   {
+    "label": "Second half",
+    "due": "08-31",
+    "delinquent": "09-01"
+   }
+  ],
+  "penalty": "14% per annum statutory interest running from delinquency date (Neb. Rev. Stat. § 45-104.01, § 77-207)",
+  "discount": "none",
+  "appeal_window": "June 1 to June 30 to County Board of Equalization (Neb. Rev. Stat. § 77-1502)",
+  "source_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=77-207",
+  "statute": "Neb. Rev. Stat. § 77-207",
+  "note": "In counties > 100,000 population (Douglas, Lancaster, Sarpy), delinquent dates are April 1 and August 1; in all other counties, delinquent dates are May 1 and September 1.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Nevada",
+  "code": "NV",
+  "tax_year_basis": "fiscal year July 1 - June 30, bills mailed July",
+  "installments": 4,
+  "due": [
+   {
+    "label": "First installment",
+    "due": "08-17",
+    "delinquent": "08-28"
+   },
+   {
+    "label": "Second installment",
+    "due": "10-05",
+    "delinquent": "10-16"
+   },
+   {
+    "label": "Third installment",
+    "due": "01-04",
+    "delinquent": "01-15"
+   },
+   {
+    "label": "Fourth installment",
+    "due": "03-01",
+    "delinquent": "03-12"
+   }
+  ],
+  "penalty": "4% if delinquent within 10 days; 5% within 30 days; 6% within 40 days; 7% thereafter (NRS 361.483(5))",
+  "discount": "none",
+  "appeal_window": "on or before January 15 to County Board of Equalization (NRS 361.357)",
+  "source_url": "https://www.leg.state.nv.us/nrs/nrs-361.html#NRS361Sec483",
+  "statute": "NRS 361.483",
+  "note": "Due dates are the 3rd Monday in August, 1st Monday in October, 1st Monday in January, and 1st Monday in March (dates shift slightly with calendar). 10-day grace period before penalties.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "New Hampshire",
+  "code": "NH",
+  "tax_year_basis": "tax year April 1 - March 31",
+  "installments": 0,
+  "due": [],
+  "penalty": "8% per annum interest from the due date until paid (RSA 76:13)",
+  "discount": "towns may authorize discount up to 2% for prompt payment (RSA 76:14)",
+  "appeal_window": "file abatement application with selectmen/assessors by March 1 following notice of tax (RSA 76:16)",
+  "source_url": "https://www.gencourt.state.nh.us/rsa/html/V/76/76-13.htm",
+  "statute": "N.H. Rev. Stat. Ann. § 76:13, § 76:15-a",
+  "note": "county/municipal-set; municipalities adopt semi-annual under RSA 76:15-a (1st bill typically due July 1; 2nd bill due Dec 1 or 30 days after bill) or single annual bill under RSA 76:13 due Dec 1.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "New Jersey",
+  "code": "NJ",
+  "tax_year_basis": "calendar 2026, bills mailed summer",
+  "installments": 4,
+  "due": [
+   {
+    "label": "First quarter",
+    "due": "02-01",
+    "delinquent": "02-11"
+   },
+   {
+    "label": "Second quarter",
+    "due": "05-01",
+    "delinquent": "05-11"
+   },
+   {
+    "label": "Third quarter",
+    "due": "08-01",
+    "delinquent": "08-11"
+   },
+   {
+    "label": "Fourth quarter",
+    "due": "11-01",
+    "delinquent": "11-11"
+   }
+  ],
+  "penalty": "up to 8% per annum on first $1,500 and up to 18% per annum on excess over $1,500; optional 6% year-end penalty on delinquencies over $10,000 (N.J.S.A. 54:4-67)",
+  "discount": "none (municipalities may allow up to 6% per annum discount for prepayment under 54:4-67)",
+  "appeal_window": "April 1 (or May 1 if municipal-wide revaluation) to County Board of Taxation (N.J.S.A. 54:3-21)",
+  "source_url": "https://www.nj.gov/treasury/taxation/lpt/localtax.shtml",
+  "statute": "N.J.S.A. 54:4-66, 54:4-67",
+  "note": "Quarterly payments due Feb 1, May 1, Aug 1, Nov 1. Statutory 10-day grace period; if unpaid by 10th, interest accrues from original due date.",
+  "verified": "2026-09-19 (url re-checked by Ori)"
+ },
+ {
+  "state": "New Mexico",
+  "code": "NM",
+  "tax_year_basis": "calendar 2026, bills mailed Nov 1",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "11-10",
+    "delinquent": "12-11"
+   },
+   {
+    "label": "Second half",
+    "due": "04-10",
+    "delinquent": "05-11"
+   }
+  ],
+  "penalty": "1% per month interest plus 1% per month penalty (max 5% penalty) under N.M. Stat. Ann. § 7-38-49, § 7-38-50",
+  "discount": "none",
+  "appeal_window": "protest valuation within 30 days of mailing date of notice of valuation (mailed around April 1) (N.M. Stat. Ann. § 7-38-22)",
+  "source_url": "https://www.tax.newmexico.gov/2020/10/21/property-tax/",
+  "statute": "N.M. Stat. Ann. § 7-38-38, § 7-38-49, § 7-38-50",
+  "note": "First half due Nov 10, delinquent after Dec 10 5pm. Second half due April 10, delinquent after May 10 5pm.",
+  "verified": "2026-09-19 (url re-checked by Ori)"
+ },
+ {
+  "state": "New York",
+  "code": "NY",
+  "tax_year_basis": "calendar/fiscal depending on taxing jurisdiction",
+  "installments": 0,
+  "due": [],
+  "penalty": "1% for first month of delinquency plus 1% for each additional month (RPTL § 924-a); NYC interest rates set by council (typically 7-18%)",
+  "discount": "early discount permitted only if adopted by county/town resolution (RPTL § 924)",
+  "appeal_window": "Grievance Day (typically 4th Tuesday in May for most towns) to local Board of Assessment Review (RPTL § 524)",
+  "source_url": "https://www.nysenate.gov/legislation/laws/RPT/924",
+  "statute": "N.Y. Real Prop. Tax Law § 924, § 924-a, § 925",
+  "note": "county-set; multi-tier calendar under NY RPTL: Town/County taxes typically due Jan 31; School taxes due Sept 30; NYC property taxes billed quarterly (July 1, Oct 1, Jan 1, April 1) or semi-annually (July 1, Jan 1).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "North Carolina",
+  "code": "NC",
+  "tax_year_basis": "calendar 2026, bills mailed July/Aug",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "01-05",
+    "delinquent": "01-06"
+   }
+  ],
+  "penalty": "2% interest for remainder of January (Jan 6-31), plus 0.75% for each month thereafter until paid (N.C. Gen. Stat. § 105-360(a))",
+  "discount": "counties may adopt schedule of discounts for payments made in July, August, or September (typically 0.5% - 1.5% under N.C.G.S. § 105-360(c))",
+  "appeal_window": "County Board of Equalization and Review prior to adjournment (typically May/June or within 30 days of notice) (N.C.G.S. § 105-322)",
+  "source_url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_105/GS_105-360.html",
+  "statute": "N.C. Gen. Stat. § 105-360",
+  "note": "Taxes due September 1, payable at par through January 5 of following year, delinquent January 6.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "North Dakota",
+  "code": "ND",
+  "tax_year_basis": "calendar 2026, bills mailed December",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First installment",
+    "due": "02-28",
+    "delinquent": "03-01"
+   },
+   {
+    "label": "Second installment",
+    "due": "10-14",
+    "delinquent": "10-15"
+   }
+  ],
+  "penalty": "1st installment: 1% penalty March 1, 2% May 1, 3% July 1, 4% Oct 15; 2nd installment: 4% Oct 15; plus 12% per annum interest starting Jan 1 (N.D.C.C. § 57-20-01)",
+  "discount": "5% discount on consolidated tax if paid in full on or before February 15 (N.D.C.C. § 57-20-07)",
+  "appeal_window": "attend local township/city equalization meeting in April, or county commissioners by second Tuesday in June (N.D.C.C. § 57-09-04)",
+  "source_url": "https://ndlegis.gov/cencode/t57c20.pdf",
+  "statute": "N.D.C.C. § 57-20-01, § 57-20-07",
+  "note": "Due January 1. First installment delinquent March 1, second installment delinquent October 15. 5% discount if paid in full by February 15.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Ohio",
+  "code": "OH",
+  "tax_year_basis": "prior year assessment, bills mailed winter & summer",
+  "installments": 0,
+  "due": [],
+  "penalty": "10% penalty on unpaid installment (reduced to 5% if paid within 10 days of due date) plus statutory interest under R.C. 5703.47 (R.C. 323.121)",
+  "discount": "none",
+  "appeal_window": "file complaint with County Board of Revision between January 1 and March 31 (R.C. 5715.19)",
+  "source_url": "https://tax.ohio.gov/government/real-property-tax",
+  "statute": "Ohio Rev. Code § 323.12, § 323.17, § 5715.19",
+  "note": "county-set; statutory default under R.C. 323.12 is Dec 31 and June 20, but county commissioners routinely extend dates (Cuyahoga mid-Feb & mid-July; Franklin Jan 31 & June 20; Hamilton Jan 31 & June 20).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Oklahoma",
+  "code": "OK",
+  "tax_year_basis": "calendar 2026, bills mailed Nov",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "12-31",
+    "delinquent": "01-01"
+   },
+   {
+    "label": "Second half",
+    "due": "03-31",
+    "delinquent": "04-01"
+   }
+  ],
+  "penalty": "1.5% per month interest (18% annually) on delinquent amounts (68 O.S. § 2913(A))",
+  "discount": "none",
+  "appeal_window": "within 30 calendar days of the date notice was mailed by county assessor (68 O.S. § 2876)",
+  "source_url": "https://oklahoma.gov/tax.html",
+  "statute": "68 O.S. § 2913",
+  "note": "Full payment or first half due December 31 (delinquent Jan 1). If first half is paid by Dec 31, second half due March 31. If not, full amount becomes delinquent Jan 1.",
+  "verified": "2026-09-19 (url re-checked by Ori)"
+ },
+ {
+  "state": "Oregon",
+  "code": "OR",
+  "tax_year_basis": "fiscal year July 1 - June 30, bills mailed mid-October",
+  "installments": 3,
+  "due": [
+   {
+    "label": "First third",
+    "due": "11-15",
+    "delinquent": "11-16"
+   },
+   {
+    "label": "Second third",
+    "due": "02-15",
+    "delinquent": "02-16"
+   },
+   {
+    "label": "Final third",
+    "due": "05-15",
+    "delinquent": "05-16"
+   }
+  ],
+  "penalty": "1.333% per month (16% annually) interest charged on delinquent installments (ORS 311.505(2))",
+  "discount": "3% discount if full payment made by Nov 15; 2% discount if two-thirds paid by Nov 15 (ORS 311.505(3))",
+  "appeal_window": "file petition with Board of Property Tax Appeals (BOPTA) between tax bill mailing and December 31 (ORS 309.100)",
+  "source_url": "https://www.oregonlegislature.gov/bills_laws/ors/ors311.html",
+  "statute": "ORS 311.505",
+  "note": "Taxes payable in 3 installments: Nov 15, Feb 15, May 15. Discounts: 3% full payment by Nov 15, 2% two-thirds payment by Nov 15.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Pennsylvania",
+  "code": "PA",
+  "tax_year_basis": "calendar for county/muni; fiscal July 1 - June 30 for schools",
+  "installments": 0,
+  "due": [],
+  "penalty": "10% penalty added after four-month face period ends (72 P.S. § 5511.10)",
+  "discount": "2% discount if paid within two months of notice date (72 P.S. § 5511.10)",
+  "appeal_window": "annual assessment appeal deadline is August 1 or September 1 depending on county class (72 P.S. § 5020-505)",
+  "source_url": "https://dced.pa.gov/local-government/",
+  "statute": "72 P.S. § 5511.10",
+  "note": "county-set; multi-tier calendar under Local Tax Collection Law (72 P.S. § 5511.10): County/Township bills mailed March 1 (2% discount thru April 30, face thru June 30, 10% penalty after June 30); School bills mailed July 1 (2% discount thru Aug 31, face thru Oct 31, 10% penalty after Oct 31).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Rhode Island",
+  "code": "RI",
+  "tax_year_basis": "tax year Dec 31 assessment date, bills mailed summer",
+  "installments": 0,
+  "due": [],
+  "penalty": "interest rate determined by city/town council, up to statutory max 18% per annum (R.I. Gen. Laws § 44-5-9)",
+  "discount": "municipalities may authorize up to 5% discount for early lump-sum payment (R.I. Gen. Laws § 44-5-10)",
+  "appeal_window": "within 90 days from the date first tax payment is due to local tax assessor (R.I. Gen. Laws § 44-5-26)",
+  "source_url": "https://municipalfinance.ri.gov/",
+  "statute": "R.I. Gen. Laws § 44-5-7, § 44-5-8, § 44-5-26",
+  "note": "county/municipal-set; R.I. Gen. Laws § 44-5-7 authorizes each municipality to establish quarterly installments and due dates (e.g. Providence: July 24, Oct 24, Jan 24, Apr 24; Cranston: July 15, Oct 15, Jan 15, Apr 15).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "South Carolina",
+  "code": "SC",
+  "tax_year_basis": "calendar 2026, bills mailed October",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "01-15",
+    "delinquent": "01-16"
+   }
+  ],
+  "penalty": "3% penalty Jan 16 - Feb 1; additional 7% penalty (total 10%) Feb 2 - March 16; additional 5% penalty (total 15%) plus execution costs after March 16 (S.C. Code Ann. § 12-45-180)",
+  "discount": "none",
+  "appeal_window": "within 90 days after mailing date of property assessment notice to county assessor (S.C. Code Ann. § 12-60-2510)",
+  "source_url": "https://www.scstatehouse.gov/code/t12c045.php",
+  "statute": "S.C. Code Ann. § 12-45-70, § 12-45-180",
+  "note": "Taxes payable without penalty on or before January 15 following the year of assessment.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "South Dakota",
+  "code": "SD",
+  "tax_year_basis": "calendar 2026, bills mailed January",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "04-30",
+    "delinquent": "05-01"
+   },
+   {
+    "label": "Second half",
+    "due": "10-31",
+    "delinquent": "11-01"
+   }
+  ],
+  "penalty": "10% per annum (0.833% per month) interest on delinquent amounts (SDCL § 10-21-23, § 10-21-24)",
+  "discount": "none",
+  "appeal_window": "deliver written appeal to local clerk by first Tuesday in April, or county board by first Tuesday in May (SDCL § 10-11-16, § 10-11-25)",
+  "source_url": "https://sdlegislature.gov/Statutes/Codified_Laws/2048598",
+  "statute": "SDCL § 10-21-23, § 10-21-24",
+  "note": "First half delinquent May 1; second half delinquent November 1.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Tennessee",
+  "code": "TN",
+  "tax_year_basis": "calendar 2026, bills mailed October",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "02-28",
+    "delinquent": "03-01"
+   }
+  ],
+  "penalty": "1.5% interest and penalty on March 1, plus 1.5% for each additional month thereafter until paid (18% per year) (Tenn. Code Ann. § 67-5-2010)",
+  "discount": "counties may adopt discounts for early payment (e.g. 2% in Oct, 1% in Nov under Tenn. Code Ann. § 67-5-1804)",
+  "appeal_window": "appeal to County Board of Equalization by June 1 or within 45 days of assessment notice (Tenn. Code Ann. § 67-5-1407)",
+  "source_url": "https://comptroller.tn.gov/pa",
+  "statute": "Tenn. Code Ann. § 67-5-1801, § 67-5-2010",
+  "note": "Taxes become payable first Monday in October; delinquent March 1 of the following year (due last day of Feb).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Texas",
+  "code": "TX",
+  "tax_year_basis": "calendar 2026, bills mailed Oct",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Full payment",
+    "due": "01-31",
+    "delinquent": "02-01"
+   }
+  ],
+  "penalty": "6% penalty + 1% interest Feb, +2%/mo to 12% by July (Tex. Tax Code §33.01)",
+  "discount": "none",
+  "appeal_window": "protest by May 15 or 30 days after notice",
+  "source_url": "https://comptroller.texas.gov/taxes/property-tax/",
+  "statute": "Tex. Tax Code §31.02",
+  "note": "Split payment option under § 31.03 if adopted by taxing unit: 1/2 by Nov 30, 1/2 by June 30.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Utah",
+  "code": "UT",
+  "tax_year_basis": "calendar 2026, bills mailed October",
+  "installments": 1,
+  "due": [
+   {
+    "label": "Annual payment",
+    "due": "11-30",
+    "delinquent": "12-01"
+   }
+  ],
+  "penalty": "2.5% penalty (or $10, whichever is greater) if paid on or before January 31; after January 31, penalty is 1% or $10 plus statutory interest from December 1 (Utah Code Ann. § 59-2-1331(2))",
+  "discount": "none",
+  "appeal_window": "file appeal with County Board of Equalization on or before September 15 or 45 days after notice mailed (Utah Code Ann. § 59-2-1004)",
+  "source_url": "https://le.utah.gov/xcode/Title59/Chapter2/59-2-S1331.html",
+  "statute": "Utah Code Ann. § 59-2-1331",
+  "note": "All real property taxes due November 30 at 12:00 midnight (delinquent Dec 1).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Vermont",
+  "code": "VT",
+  "tax_year_basis": "fiscal year July 1 - June 30",
+  "installments": 0,
+  "due": [],
+  "penalty": "statutory 8% penalty on delinquent taxes plus interest of 1% per month (or up to 1.5% if voted by town) (32 V.S.A. § 1674, § 4875)",
+  "discount": "towns may vote discount up to 4% for prompt payment (32 V.S.A. § 4774)",
+  "appeal_window": "grievance hearings begin within 14 days after abstract of grand list lodged (June) (32 V.S.A. § 4221)",
+  "source_url": "https://legislature.vermont.gov/statutes/section/32/133/04772",
+  "statute": "32 V.S.A. § 4772, § 4773, § 1674",
+  "note": "county/municipal-set; 32 V.S.A. § 4772 provides that towns determine number of installments and due dates at annual meeting (commonly 2 or 4 installments, e.g. Burlington Aug 12/Nov 12/Mar 12; Montpelier quarterly).",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Virginia",
+  "code": "VA",
+  "tax_year_basis": "calendar 2026",
+  "installments": 0,
+  "due": [],
+  "penalty": "up to 10% penalty or $10 (whichever is greater) plus interest set by locality up to 10% per annum (Va. Code Ann. § 58.1-3916)",
+  "discount": "localities may provide for discount not exceeding 5% for payment on or before due date (Va. Code Ann. § 58.1-3916)",
+  "appeal_window": "local Board of Equalization application deadline varies by county (typically March 1 to July 1) (Va. Code Ann. § 58.1-3378)",
+  "source_url": "https://law.lis.virginia.gov/vacode/title58.1/chapter39/section58.1-3916/",
+  "statute": "Va. Code Ann. § 58.1-3916",
+  "note": "county-set; localities set due dates under Va. Code Ann. § 58.1-3916; overwhelming majority (Fairfax, Loudoun, Arlington, Prince William, Richmond) use semi-annual schedule due June 5 and December 5.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Washington",
+  "code": "WA",
+  "tax_year_basis": "calendar 2026, bills mailed February",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "04-30",
+    "delinquent": "05-01"
+   },
+   {
+    "label": "Second half",
+    "due": "10-31",
+    "delinquent": "11-01"
+   }
+  ],
+  "penalty": "1% per month interest (12% annually) plus 3% penalty on unpaid balances on June 1 and additional 8% penalty on December 1 (RCW 84.56.020(5))",
+  "discount": "none",
+  "appeal_window": "July 1 or within 30 days (up to 60 days if county adopted) of assessment notice to County Board of Equalization (RCW 84.40.038)",
+  "source_url": "https://app.leg.wa.gov/rcw/default.aspx?cite=84.56.020",
+  "statute": "RCW 84.56.020",
+  "note": "First half due April 30 (delinquent May 1); second half due October 31 (delinquent Nov 1). Taxes under $50 due in full April 30.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "West Virginia",
+  "code": "WV",
+  "tax_year_basis": "calendar 2026, bills mailed July",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First half",
+    "due": "09-01",
+    "delinquent": "10-01"
+   },
+   {
+    "label": "Second half",
+    "due": "03-01",
+    "delinquent": "04-01"
+   }
+  ],
+  "penalty": "9% per annum interest from the date of delinquency until paid (W. Va. Code § 11A-1-3(c))",
+  "discount": "2.5% discount on each installment if paid on or before due dates (Sept 1 and Mar 1) (W. Va. Code § 11A-1-3(b))",
+  "appeal_window": "County Commission sitting as Board of Equalization during February (typically before Feb 20) (W. Va. Code § 11-3-24)",
+  "source_url": "https://code.wvlegislature.gov/11A-1-3/",
+  "statute": "W. Va. Code § 11A-1-3",
+  "note": "2.5% discount if 1st half paid on or before Sept 1; 2.5% discount if 2nd half paid on or before March 1. Delinquent Oct 1 and April 1.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Wisconsin",
+  "code": "WI",
+  "tax_year_basis": "calendar 2026, bills mailed December",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First installment",
+    "due": "01-31",
+    "delinquent": "02-01"
+   },
+   {
+    "label": "Second installment",
+    "due": "07-31",
+    "delinquent": "08-01"
+   }
+  ],
+  "penalty": "1% per month interest (12% annually) from February 1 until paid, plus optional county penalty up to 0.5% per month (Wis. Stat. § 74.47)",
+  "discount": "none",
+  "appeal_window": "Board of Review hearings held typically in May/June; written objection required 48 hours prior to first meeting (Wis. Stat. § 70.47)",
+  "source_url": "https://docs.legis.wisconsin.gov/statutes/statutes/74/ii/11",
+  "statute": "Wis. Stat. § 74.11, § 74.12",
+  "note": "Full payment or first installment due to municipal treasurer by January 31; second installment due to County Treasurer by July 31.",
+  "verified": "2026-09-19"
+ },
+ {
+  "state": "Wyoming",
+  "code": "WY",
+  "tax_year_basis": "calendar 2026, bills mailed September",
+  "installments": 2,
+  "due": [
+   {
+    "label": "First installment",
+    "due": "09-01",
+    "delinquent": "11-10"
+   },
+   {
+    "label": "Second installment",
+    "due": "03-01",
+    "delinquent": "05-10"
+   }
+  ],
+  "penalty": "18% per annum (1.5% per month) interest on delinquent amounts (Wyo. Stat. Ann. § 39-13-108(b)(ii))",
+  "discount": "none (paying full year on or before Dec 31 waives 1st installment interest under § 39-13-108(b)(ii)(A))",
+  "appeal_window": "within 30 days of postmark date of assessment schedule to County Board of Equalization (Wyo. Stat. Ann. § 39-13-109(b)(i))",
+  "source_url": "https://wyoleg.gov/statutes/compress/title39.pdf",
+  "statute": "Wyo. Stat. Ann. § 39-13-107, § 39-13-108",
+  "note": "First installment due Sept 1, delinquent Nov 10. Second installment due March 1, delinquent May 10. Full payment on or before Dec 31 waives first installment interest.",
+  "verified": "2026-09-19"
+ }
+]
