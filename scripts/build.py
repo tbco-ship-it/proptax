@@ -4,7 +4,10 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import math
+import re
 import shutil
+from xml.sax.saxutils import escape
 from collections import defaultdict
 from pathlib import Path
 
@@ -19,11 +22,22 @@ MIN_POP_RANK = 20000  # rankings ignore tiny counties where a $200 topcode swing
 def usd(n, dec=0):
     if n is None:
         return "—"
+    if dec == 0:
+        return f"${math.floor(n + 0.5):,}"  # same rounding as Math.round in app.js
     return f"${n:,.{dec}f}"
 
 
 def pct(n):
     return "—" if n is None else f"{n:.2f}%"
+
+
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def mmdd(s):
+    """'11-01' -> 'Nov 1'; anything else passes through."""
+    m = re.fullmatch(r"(\d{2})-(\d{2})", s or "")
+    return f"{MONTHS[int(m.group(1)) - 1]} {int(m.group(2))}" if m else (s or "")
 
 
 def main():
@@ -46,7 +60,9 @@ def main():
     counties = [r for r in recs if r["level"] == "county" and r["st"] in states]
     for c in counties:
         c["path"] = f"{c['st'].lower()}/{c['slug']}/"
-        c["topcoded"] = c["tax_med"] is not None and c["tax_med"] <= 200
+        c["tax_label"] = "less than $200" if c.get("tax_bound") == "lt200" else ("$10,000 or more" if c.get("tax_bound") == "ge10000" else usd(c["tax_med"]))
+        c["home_label"] = "$2,000,000 or more" if c.get("home_bound") else usd(c["home_med"])
+        c["topcoded"] = bool(c.get("tax_bound") or c.get("home_bound"))
         c["ratio_us"] = round(c["rate"] / us["rate"], 2) if c["rate"] else None
         states[c["st"]]["counties"].append(c)
     for st, s in states.items():
@@ -73,6 +89,8 @@ def main():
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
     env.filters["usd"] = usd
     env.filters["pct"] = pct
+    env.filters["mmdd"] = mmdd
+    env.globals["STATE_NAMES"] = {st: s["name"] for st, s in states.items()}
     env.globals.update(site=SITE, base=base, origin=origin, today=today.isoformat(), v=v, adsense_pub=args.adsense_pub,
                        us=us, states=states, state_list=state_list, n_counties=len(counties), source=source, rules=rules, MIN_POP_RANK=MIN_POP_RANK)
 
@@ -80,10 +98,10 @@ def main():
         shutil.rmtree(DIST)
     DIST.mkdir()
     shutil.copytree(ROOT / "static", DIST / "static")
-    # search index: [name, st, slug, rate, tax_med, home_med, pop]
-    items = [[c["name"], c["st"], c["slug"], c["rate"], c["tax_med"], c["home_med"], c["population"]] for c in counties]
-    items += [[s["name"], s["st"], "", s["rate"], s["tax_med"], s["home_med"], s["population"]] for s in states.values()]
-    (DIST / "static/index.json").write_text(json.dumps({"us": [us["rate"], us["tax_med"], us["home_med"]], "items": items}, separators=(",", ":")))
+    # search index: [name, st, slug, rate (unrounded), tax_label, home_label, pop]
+    items = [[c["name"], c["st"], c["slug"], c["rate"], c["tax_label"], c["home_label"], c["population"]] for c in counties]
+    items += [[s["name"], s["st"], "", s["rate"], usd(s["tax_med"]), usd(s["home_med"]), s["population"]] for s in states.values()]
+    (DIST / "static/index.json").write_text(json.dumps({"us": [us["rate"], us["tax_med"], us["home_med"]], "states": {st: s["name"] for st, s in states.items()}, "items": items}, separators=(",", ":")))
 
     urls = []
 

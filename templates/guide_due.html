@@ -9,7 +9,7 @@
 {% for s in state_list|sort(attribute='name') %}{% set r = s.rules %}
 <div class="sec"><div class="sec-h"><h2>{{ s.name }}</h2><a href="{{ base }}{{ s.path }}">{{ s.rate|pct }} · counties</a></div>
 {% if r %}<table class="tbl spec"><tbody>
-{% for d in r.due %}<tr><th>{{ d.label }}</th><td>{{ d.due }}{% if d.delinquent %} <span class="muted">· delinquent {{ d.delinquent }}</span>{% endif %}</td></tr>{% endfor %}
+{% if not r.due %}<tr><th>Payment dates</th><td>Set by the local tax authority — check your city, town or county collector.</td></tr>{% endif %}{% for d in r.due %}<tr><th>{{ d.label }}</th><td>Due {{ d.due|mmdd }}{% if d.delinquent %} <span class="muted">· delinquent from {{ d.delinquent|mmdd }}</span>{% endif %}</td></tr>{% endfor %}
 {% if r.penalty %}<tr><th>Late penalty</th><td>{{ r.penalty }}</td></tr>{% endif %}
 {% if r.discount and r.discount != 'none' %}<tr><th>Discount</th><td>{{ r.discount }}</td></tr>{% endif %}
 </tbody></table><p class="muted small">{{ r.note }} <a href="{{ r.source_url }}" rel="noopener">{{ r.statute or 'Source' }}</a></p>

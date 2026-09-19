@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{{ site }}{% endblock %}</title>
-<meta name="description" content="{% block description %}Effective property tax rate, median tax bill and home value for every U.S. county ({{ '{:,}'.format(n_counties) }}), from Census ACS data. Estimate your bill and see when it is due in your state.{% endblock %}">
+<meta name="description" content="{% block description %}Property tax benchmark (median tax paid ÷ median home value), median annual tax and home value for every U.S. county and county equivalent ({{ '{:,}'.format(n_counties) }}), from Census ACS data. Estimate your bill and see when it is due in your state.{% endblock %}">
 <link rel="canonical" href="{{ origin }}{{ base }}{{ path }}">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -29,7 +29,7 @@
 </main>
 <footer>
   <p><a href="{{ base }}about/">About</a> · <a href="{{ base }}methodology/">Data & method</a> · <a href="{{ base }}guide/how-property-tax-is-calculated/">How property tax works</a> · <a href="{{ base }}guide/appeal/">Appeal your assessment</a> · <a href="{{ base }}privacy/">Privacy</a> · <a href="{{ base }}contact/">Contact</a></p>
-  <p class="muted">Rates are medians from the U.S. Census Bureau's American Community Survey ({{ source.vintage }} 5-year estimates), not your assessor's mill rate. Your bill depends on your assessed value, exemptions and local levies — the county treasurer's notice wins.</p>
+  <p class="muted">Benchmarks are median real estate taxes paid ÷ median home value from the U.S. Census Bureau's American Community Survey ({{ source.vintage }} 5-year estimates), not your assessor's mill rate. Your bill depends on taxable value, exemptions and local levies — confirm the amount and deadline on your official tax bill.</p>
 </footer>
 <script src="{{ base }}static/ui.js?v={{ v }}" defer></script>
 </body>

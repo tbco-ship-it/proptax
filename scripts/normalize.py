@@ -4,6 +4,7 @@ Effective rate = median real estate taxes paid (B25103_E001) / median owner-occu
 States come from the same files (sumlevel 040); US from 010."""
 import json
 import re
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
@@ -36,12 +37,13 @@ def load(table, cols):
 
 
 def slug(s):
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()  # Doña Ana -> dona-ana
     return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s.lower())).strip("-")
 
 
 def main():
     names = {}
-    with open(RAW / "geos.dat", encoding="latin-1") as fh:
+    with open(RAW / "geos.dat", encoding="utf-8-sig") as fh:
         head = fh.readline().rstrip("\n").split("|")
         gi, ni = head.index("GEO_ID"), head.index("NAME")
         for line in fh:
@@ -55,10 +57,11 @@ def main():
     recs = []
     for g, v in merged.items():
         fips = g.split("US")[1]
-        if v.get("tax_med") is None or v.get("home_med") is None:
-            v["rate"] = None
-        else:
-            v["rate"] = round(v["tax_med"] / v["home_med"] * 100, 2)
+        tax, home = v.get("tax_med"), v.get("home_med")
+        # ACS jam values: 199 = "less than $200", 10001 = "$10,000 or more" (and 2000001 = "$2,000,000 or more" for value) — no rate from a bound
+        v["tax_bound"] = "lt200" if tax == 199 else ("ge10000" if tax == 10001 else None)
+        v["home_bound"] = "ge2m" if home == 2000001 else None
+        v["rate"] = (tax / home * 100) if (tax is not None and home and not v["tax_bound"] and not v["home_bound"]) else None
         if g.startswith("0500000US"):
             st = STATES.get(fips[:2])
             if not st:

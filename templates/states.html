@@ -4,7 +4,7 @@
 {% block content %}
 <nav class="crumbs"><a href="{{ base }}">Home</a> › States</nav>
 <h1>Property tax rates by state</h1>
-<p class="prose">Ranked by the median effective rate homeowners pay. The U.S. median is {{ us.rate|pct }} ({{ us.tax_med|usd }} on a {{ us.home_med|usd }} home). Click a state for every county and its due dates.</p>
+<p class="prose">Ranked by benchmark rate: median annual property tax ÷ median home value. U.S. benchmark {{ us.rate|pct }} (median tax {{ us.tax_med|usd }}, median home value {{ us.home_med|usd }}). 50 states, D.C. and Puerto Rico. Click a state for every county and its due dates.</p>
 <div class="ad-slot"><!-- ad: states --></div>
-<ul class="list fee">{% for s in state_list %}<li><a href="{{ base }}{{ s.path }}"><span class="nm">#{{ s.rank }} {{ s.name }}<small class="rule">median home {{ s.home_med|usd }} · {{ s.counties|length }} counties{% if s.rules %} · due {% for d in s.rules.due %}{{ d.due }}{% if not loop.last %} & {% endif %}{% endfor %}{% endif %}</small></span><span class="meta"><b>{{ s.rate|pct }}</b> · {{ s.tax_med|usd }}</span></a></li>{% endfor %}</ul>
+<ul class="list fee">{% for s in state_list %}<li><a href="{{ base }}{{ s.path }}"><span class="nm">#{{ s.rank }} {{ s.name }}<small class="rule">median home {{ s.home_med|usd }} · {{ s.counties|length }} counties{% if s.rules and s.rules.due %} · due {% for d in s.rules.due %}{{ d.due|mmdd }}{% if not loop.last %} & {% endif %}{% endfor %}{% elif s.rules %} · dates set locally{% endif %}</small></span><span class="meta"><b>{{ s.rate|pct }}</b><small>{{ s.tax_med|usd }} / year</small></span></a></li>{% endfor %}</ul>
 {% endblock %}

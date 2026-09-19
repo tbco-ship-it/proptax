@@ -1002,13 +1002,13 @@
     "delinquent": "11-01"
    }
   ],
-  "penalty": "1% per month interest (12% annually) plus 3% penalty on unpaid balances on June 1 and additional 8% penalty on December 1 (RCW 84.56.020(5))",
+  "penalty": "For residential property with four or fewer units, taxes levied in 2023 or later accrue 9% annual interest, calculated monthly, with no delinquency penalty. Other property accrues 12% annual interest plus a 3% penalty on June 1 and a further 8% on December 1 (RCW 84.56.020(5)).",
   "discount": "none",
   "appeal_window": "July 1 or within 30 days (up to 60 days if county adopted) of assessment notice to County Board of Equalization (RCW 84.40.038)",
   "source_url": "https://app.leg.wa.gov/rcw/default.aspx?cite=84.56.020",
   "statute": "RCW 84.56.020",
   "note": "First half due April 30 (delinquent May 1); second half due October 31 (delinquent Nov 1). Taxes under $50 due in full April 30.",
-  "verified": "2026-09-19"
+  "verified": "2026-09-19 (statute text re-read by Ori after ChatGPT review)"
  },
  {
   "state": "West Virginia",
