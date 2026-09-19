@@ -12,11 +12,6 @@
 </section>
 <div class="ad-slot"><!-- ad: state --></div>
 {% include "_due.html" %}
-{% if s.rules.discount and s.rules.discount != 'none' %}<tr><th>Early-payment discount</th><td>{{ s.rules.discount }}</td></tr>{% endif %}
-{% if s.rules.appeal_window %}<tr><th>Appeal window</th><td>{{ s.rules.appeal_window }}</td></tr>{% endif %}
-</tbody></table>
-<p class="muted small">{{ s.rules.note }} Source: <a href="{{ s.rules.source_url }}" rel="noopener">{{ s.rules.statute or s.rules.source_url }}</a> (checked {{ s.rules.verified }}).</p></div>
-{% endif %}
 <div class="sec"><div class="sec-h"><h2>Counties, highest rate first</h2></div>
 <ul class="list fee">{% for c in s.counties %}<li><a href="{{ base }}{{ c.path }}"><span class="nm">{{ c.name }}<small class="rule">Median home value {{ c.home_label }}</small></span><span class="meta"><b>{{ c.rate|pct }}</b><small>{{ c.tax_label }} / year</small></span></a></li>{% endfor %}</ul></div>
 <p class="muted small">Benchmark = median real estate taxes paid ÷ median home value, ACS {{ source.vintage }} 5-year. Counties where the Census reports a range ("less than $200", "$10,000 or more") get no rate.</p>
