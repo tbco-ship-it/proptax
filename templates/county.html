@@ -33,7 +33,7 @@
     {% if c.units %}<tr><th>Owner-occupied</th><td>{{ (c.owner_units / c.units * 100)|round|int }}% of {{ '{:,}'.format(c.units) }} homes</td></tr>{% endif %}
     {% if c.population %}<tr><th>Population</th><td>{{ '{:,}'.format(c.population) }}</td></tr>{% endif %}
   </tbody></table></details>
-  <p class="sheet-actions"><a class="next" href="{{ base }}{{ s.path }}">All {{ s.name }} counties</a>{% if c.rank_us %}<a class="next" href="{{ base }}rankings/{{ 'highest' if c.rank_us <= c.n_us / 2 else 'lowest' }}/">#{{ c.rank_us }} of {{ '{:,}'.format(c.n_us) }} U.S. counties</a>{% endif %}</p>
+  <p class="sheet-actions"><a class="next" href="{{ base }}{{ s.path }}">All {{ s.name }} counties</a>{% if c.rank_us %}{% if c.rank_us <= 100 %}<a class="next" href="{{ base }}rankings/highest/">#{{ c.rank_us }} of {{ '{:,}'.format(c.n_us) }} U.S. counties</a>{% elif c.rank_us > c.n_us - 100 %}<a class="next" href="{{ base }}rankings/lowest/">#{{ c.rank_us }} of {{ '{:,}'.format(c.n_us) }} U.S. counties</a>{% else %}<a class="next" href="{{ base }}{{ s.path }}#counties">#{{ c.rank_us }} of {{ '{:,}'.format(c.n_us) }} U.S. counties</a>{% endif %}{% endif %}</p>
 </section>
 <div class="ad-slot"><!-- ad: county --></div>
 {% include "_due.html" %}

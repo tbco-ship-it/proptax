@@ -144,7 +144,8 @@ def main():
     for st, s in states.items():
         write(s["path"], "state.html", s=s)
         for c in s["counties"]:
-            near = sorted([x for x in s["counties"] if x is not c and x["rate"]], key=lambda x: abs((x["rate"] or 0) - (c["rate"] or 0)))[:6]
+            # No benchmark → no "similar rate" list (comparing against 0 just surfaced the state's cheapest counties)
+            near = sorted([x for x in s["counties"] if x is not c and x["rate"]], key=lambda x: abs(x["rate"] - c["rate"]))[:6] if c["rate"] else []
             write(c["path"], "county.html", s=s, c=c, near=near)
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

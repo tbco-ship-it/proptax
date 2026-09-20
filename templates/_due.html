@@ -1,5 +1,5 @@
 {% set r = s.rules %}
-<div class="sec"><div class="sec-h"><h2>When it's due in {{ s.name }}</h2><a href="{{ base }}guide/due-dates/">All states</a></div>
+<div class="sec" id="due"><div class="sec-h"><h2>When it's due in {{ s.name }}</h2><a href="{{ base }}guide/due-dates/">All states</a></div>
 {% if r %}
 {% if not r.due %}<p class="sheet-title" style="margin:0 0 4px">Payment dates vary by local tax authority.</p><p class="prose" style="margin-top:0">Check your city, town or county tax collector for this year's deadline. The statewide notes below are a general guide.</p>{% endif %}
 <table class="tbl spec"><tbody>
