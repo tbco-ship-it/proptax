@@ -1,0 +1,31 @@
+{
+ "name": "CountyTax — property tax by county",
+ "short_name": "CountyTax",
+ "description": "Effective property tax rates and median bills for every US county",
+ "lang": "en",
+ "start_url": "../?src=home",
+ "scope": "../",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#ffffff",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
