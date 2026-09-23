@@ -11,6 +11,15 @@
   <p class="sheet-text">{{ s.rate|relative_to(us.rate) }} the U.S. benchmark {{ us.rate|pct }}. {% if s.rules and s.rules.due %}{% for d in s.rules.due %}{{ d.label }} due {{ d.due|mmdd }}{% if not loop.last %}, {% endif %}{% endfor %}.{% elif s.rules %}Payment dates are set locally — see below.{% endif %} <a href="#due">Payment dates ↓</a></p>
 </section>
 <div class="ad-slot"><!-- ad: state --></div>
+{% if s.spread %}<div class="sec"><div class="sec-h"><h2>Same house, different county</h2></div>
+<p>Apply each county's benchmark rate to a {{ s.home_med|usd }} home, the {{ s.name }} median: about <b>{{ s.spread.hi_tax|usd }} a year</b> in {{ s.spread.hi.name }} ({{ s.spread.hi.rate|pct }}) versus <b>{{ s.spread.lo_tax|usd }}</b> in {{ s.spread.lo.name }} ({{ s.spread.lo.rate|pct }}) — {{ s.spread.gap|usd }} a year apart for the same house.{% if not s.spread.small_pool %} <span class="muted small">Counties with at least {{ "{:,}".format(MIN_POP_RANK) }} people.</span>{% endif %}</p>
+{% if s.populous %}<h3>Where most {{ s.name }} residents live</h3>
+<div class="tbl-wrap"><table class="tbl pop">
+<thead><tr><th>County</th><th>Rate</th><th>Median tax</th><th>Of income</th></tr></thead>
+<tbody>{% for c in s.populous %}<tr><td><a href="{{ base }}{{ c.path }}">{{ c.name }}</a>{% if c.rank_state %}<small class="muted">#{{ c.rank_state }} of {{ c.n_state }}</small>{% endif %}</td><td>{% if c.rate %}{{ c.rate|pct }}{% else %}—{% endif %}</td><td>{{ c.tax_label }}</td><td>{% if c.income_share is not none %}{{ '%.1f'|format(c.income_share) }}%{% else %}—{% endif %}</td></tr>{% endfor %}</tbody>
+</table></div>
+<p class="muted small">Of income = median annual property tax ÷ median household income (all households, owners and renters), ACS {{ source.vintage }} 5-year. A real bill depends on the assessed value and exemptions, not only the rate.</p>{% endif %}
+</div>{% endif %}
 <div class="sec" id="counties"><div class="sec-h"><h2>Counties, highest rate first</h2></div>
 <label for="county-filter" class="muted small">Find a county in this state</label>
 <input id="county-filter" class="pick" type="search" autocomplete="off" placeholder="County name">

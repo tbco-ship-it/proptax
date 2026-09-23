@@ -666,3 +666,9 @@ a{color:var(--link)}
 #value-error{color:#b42318;margin:6px 0 0}
 @media (prefers-color-scheme:dark){#value-error{color:#ff8c96}}
 #county-filter{margin:6px 0 4px}
+.tbl.pop{margin:0}
+.tbl.pop th,.tbl.pop td{padding:12px 10px;vertical-align:top}
+.tbl.pop td small{display:block;font-weight:500}
+.tbl.pop td:not(:first-child),.tbl.pop th:not(:first-child){text-align:right;white-space:nowrap}
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:640px){.tbl.pop{font-size:.9rem}.tbl.pop th,.tbl.pop td{padding:11px 6px}}

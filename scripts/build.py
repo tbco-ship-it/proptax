@@ -123,6 +123,16 @@ def main():
         s["ratio_us"] = round(s["rate"] / us["rate"], 2) if s["rate"] else None
         for c in s["counties"]:
             c["ratio_state"] = round(c["rate"] / s["rate"], 2) if c["rate"] and s["rate"] else None
+        # state-hub comparison: the same median-priced house in the highest- vs lowest-rate county, and the counties where most people live
+        pool = [c for c in ranked if (c["population"] or 0) >= MIN_POP_RANK] or ranked
+        s["spread"] = None
+        if len(pool) >= 3 and s["home_med"]:
+            hi, lo = pool[0], pool[-1]
+            hi_tax, lo_tax = (math.floor(c["rate"] / 100 * s["home_med"] + 0.5) for c in (hi, lo))  # rounded like usd() so the shown gap adds up
+            s["spread"] = {"hi": hi, "lo": lo, "hi_tax": hi_tax, "lo_tax": lo_tax, "gap": hi_tax - lo_tax, "small_pool": pool is ranked}
+        for c in s["counties"]:
+            c["income_share"] = c["tax_med"] / c["income_med"] * 100 if c["rate"] and not c.get("tax_bound") and c.get("income_med") else None
+        s["populous"] = sorted(s["counties"], key=lambda c: -(c["population"] or 0))[:5] if len(s["counties"]) > 5 else []
     ranked_us = sorted([c for c in counties if c["rate"] and (c["population"] or 0) >= MIN_POP_RANK], key=lambda c: -c["rate"])
     for i, c in enumerate(ranked_us):
         c["rank_us"], c["n_us"] = i + 1, len(ranked_us)
