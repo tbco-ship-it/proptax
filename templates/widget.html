@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Free property tax estimator for your website | {{ site }}{% endblock %}
+{% block description %}Add a free property tax estimator to your website or blog: pick a state and county, enter a home value, get the yearly estimate from Census benchmarks for all {{ '{:,}'.format(n_counties) }} U.S. counties. Copy one line of code.{% endblock %}
+{% block content %}
+<nav class="crumbs"><a href="{{ base }}">Home</a> › Embed</nav>
+<h1>Put a property tax estimator on your site</h1>
+<div class="prose"><p>Real estate agents, mortgage brokers and local blogs can show visitors a yearly property tax estimate for any of the {{ '{:,}'.format(n_counties) }} U.S. counties. It is free, has no ads, sets no cookies and follows the reader's light or dark mode. Paste the code below where you want it.</p></div>
+{% set code %}<iframe src="{{ origin }}{{ base }}embed/" title="Property tax estimator" width="100%" height="440" style="border:0;max-width:440px" loading="lazy"></iframe>
+<p style="font-size:12px;margin:4px 0 0">Property tax data: <a href="{{ origin }}{{ base }}">CountyTax — property tax rates by county</a></p>{% endset %}
+<div class="sec"><div class="sec-h"><h2>Code</h2></div>
+<textarea id="embed-code" readonly rows="5" style="width:100%;font:13px/1.4 ui-monospace,Menlo,monospace;padding:12px;border-radius:12px">{{ code }}</textarea>
+<p class="sheet-actions"><button class="next" type="button" id="copy-embed">Copy code</button></p></div>
+<div class="sec"><div class="sec-h"><h2>Preview</h2></div>{{ code|safe }}</div>
+<div class="prose"><p>The estimate is the county's benchmark rate (median real estate tax paid ÷ median home value, U.S. Census ACS {{ source.vintage }}) times the home value. It is a planning number, not a bill: exemptions, assessment ratios and local levies change the real amount. <a href="{{ base }}methodology/">How the benchmark is built</a>.</p></div>
+<script>document.getElementById('copy-embed').addEventListener('click',function(){var t=document.getElementById('embed-code');t.select();navigator.clipboard?navigator.clipboard.writeText(t.value).then(()=>{this.textContent='Copied'}):document.execCommand('copy');});</script>
+{% endblock %}

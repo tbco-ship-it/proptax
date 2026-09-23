@@ -174,6 +174,9 @@ def main():
     write("", "index.html", top=ranked_us[:8], bottom=ranked_us[-8:][::-1])
     for page in ("about", "methodology", "privacy", "terms", "contact"):
         write(f"{page}/", f"{page}.html")
+    write("widget/", "widget.html")
+    (DIST / "embed").mkdir()
+    (DIST / "embed/index.html").write_text(env.get_template("embed.html").render(path="embed/"))  # iframe body: noindex, not in the sitemap
     write("states/", "states.html")
     write("rankings/highest/", "ranking.html", title="Counties with the highest property tax rates", rows=ranked_us[:100], kind="highest")
     write("rankings/lowest/", "ranking.html", title="Counties with the lowest property tax rates", rows=ranked_us[-100:][::-1], kind="lowest")
