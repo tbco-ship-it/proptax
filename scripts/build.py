@@ -162,7 +162,7 @@ def main():
         urls.append((sm or path.split("/")[0] or "core", path))
 
     write("", "index.html", top=ranked_us[:8], bottom=ranked_us[-8:][::-1])
-    for page in ("about", "methodology", "privacy", "contact"):
+    for page in ("about", "methodology", "privacy", "terms", "contact"):
         write(f"{page}/", f"{page}.html")
     write("states/", "states.html")
     write("rankings/highest/", "ranking.html", title="Counties with the highest property tax rates", rows=ranked_us[:100], kind="highest")
