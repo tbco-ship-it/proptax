@@ -114,11 +114,15 @@ def main():
     recs, source = data["records"], data["source"]
     rules_path = ROOT / "data/state_rules.json"
     rules = {r["code"]: r for r in json.loads(rules_path.read_text())} if rules_path.exists() else {}
+    # official county tax office links (verified by hand, high-impression counties first): "ST/slug" → {pay, assessor, checked}
+    offices_path = ROOT / "data/offices.json"
+    offices = json.loads(offices_path.read_text()) if offices_path.exists() else {}
     us = next(r for r in recs if r["level"] == "us")
     states = {r["st"]: dict(r, counties=[]) for r in recs if r["level"] == "state"}
     counties = [r for r in recs if r["level"] == "county" and r["st"] in states]
     for c in counties:
         c["path"] = f"{c['st'].lower()}/{c['slug']}/"
+        c["office"] = offices.get(f"{c['st']}/{c['slug']}")
         c["tax_label"] = "less than $200" if c.get("tax_bound") == "lt200" else ("$10,000 or more" if c.get("tax_bound") == "ge10000" else usd(c["tax_med"]))
         c["home_label"] = "$2,000,000 or more" if c.get("home_bound") else usd(c["home_med"])
         c["topcoded"] = bool(c.get("tax_bound") or c.get("home_bound"))

@@ -516,6 +516,8 @@ header.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;just
 .tbl tbody td{font-weight:600;color:var(--text);font-feature-settings:"tnum";white-space:nowrap}
 .tbl tbody td:first-child,.tbl tbody th:first-child{white-space:normal}
 .tbl td a{color:var(--text);font-weight:600}.tbl td a:hover{color:var(--blue)}
+/* official office links: must read as links (outbound, new tab) */
+#pay .tbl td a{color:var(--blue)}#pay .tbl td a::after{content:" ↗";font-weight:400}#pay .tbl td a:hover{color:var(--blue-press)}
 .tbl.spec th{font-weight:500;color:var(--text-2);width:52%}
 .tbl.mini th{font-weight:500;color:var(--text-2);font-size:.95rem}
 .tbl.mini td{font-size:1rem}

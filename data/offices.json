@@ -1,0 +1,1129 @@
+{
+ "AL/morgan-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Revenue Commissioner",
+   "url": "https://www.morgancountyrevenue.com/how-to-pay-your-taxes"
+  },
+  "assessor": {
+   "office": "Revenue Commissioner",
+   "url": "https://www.morgancountyrevenue.com/property-search"
+  }
+ },
+ "IL/morgan-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://morgancounty-il.com/wp/departments/treasurer/"
+  },
+  "assessor": {
+   "office": "Supervisor of Assessments",
+   "url": "https://morgancounty-il.com/wp/departments/supervisor-of-assessments/"
+  }
+ },
+ "AL/shelby-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Property Tax Commissioner",
+   "url": "https://ptc.shelbyal.com/propsearch"
+  },
+  "assessor": {
+   "office": "Property Tax Commissioner",
+   "url": "https://ptc.shelbyal.com/assessment"
+  }
+ },
+ "CA/contra-costa-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer-Tax Collector",
+   "url": "https://taxcolp.cccttc.us/lookup/"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.contracosta.ca.gov/191/Assessor"
+  }
+ },
+ "IL/calhoun-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.calhouncountyil.gov/departments/treasurer/pay-property-taxes/"
+  },
+  "assessor": {
+   "office": "Supervisor of Assessments",
+   "url": "https://www.calhouncountyil.gov/departments/supervisor-of-assessments/"
+  }
+ },
+ "AL/marshall-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Revenue Commissioner",
+   "url": "https://marshall.countygovservices.com/Property/Property/Search",
+   "note": "As of Sep 24, 2026 the portal says online payments are disabled; bill lookup works."
+  },
+  "assessor": {
+   "office": "Revenue Commissioner",
+   "url": "https://www.marshallal.gov/departments/revenue/revenue.html"
+  }
+ },
+ "MN/pipestone-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor-Treasurer",
+   "url": "https://www.pipestone-county.com/government/departments/treasurer/index.php"
+  },
+  "assessor": {
+   "office": "County Assessor",
+   "url": "https://www.pipestone-county.com/government/departments/assessor/index.php"
+  }
+ },
+ "NC/richmond-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Department (Tax Collector)",
+   "url": "https://www.richmondnc.com/313/How-to-Pay-Taxes"
+  },
+  "assessor": {
+   "office": "Tax Department",
+   "url": "https://www.richmondnc.com/176/Tax-Department"
+  }
+ },
+ "VA/bedford-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.bedfordcountyva.gov/residents/pay-taxes/real-estate-tax"
+  },
+  "assessor": {
+   "office": "Commissioner of Revenue",
+   "url": "https://www.bedfordcountyva.gov/government/departments-offices-a-d/commissioner-of-revenue"
+  }
+ },
+ "CA/orange-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer-Tax Collector",
+   "url": "https://taxbill.octreasurer.gov/"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.ocassessor.gov/"
+  }
+ },
+ "VA/bath-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.bathcountyva.gov/government/treasurer"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://www.bathcountyva.gov/government/commissioner_of_revenue"
+  }
+ },
+ "NC/jackson-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Collections (Tax Administration)",
+   "url": "https://www.jacksonnc.org/456/Tax-Collections"
+  },
+  "assessor": {
+   "office": "Tax Administration - Real Property Division",
+   "url": "https://www.jacksonnc.org/332/Real-Property"
+  }
+ },
+ "WV/randolph-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Sheriff (Treasurer) Tax Office",
+   "url": "https://randolphsheriffwv.gov/taxes/real-estate-property-taxes/"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://randolphctywv.gov/assessors-office/"
+  }
+ },
+ "CA/san-bernardino-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor-Controller/Treasurer/Tax Collector",
+   "url": "https://www.sbcountyatc.gov/tax-services/property-tax"
+  },
+  "assessor": {
+   "office": "Assessor-Recorder-County Clerk",
+   "url": "https://arc.sbcounty.gov/"
+  }
+ },
+ "NC/vance-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Administration Office",
+   "url": "https://vdsinc.com/bill-lookup/?instance-id=vance-tax"
+  },
+  "assessor": {
+   "office": "Tax Administration Office",
+   "url": "https://www.vancecounty.org/departments/tax-overview/"
+  }
+ },
+ "VA/salem-city": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://salemva.gov/426/Tax-Payment-Options"
+  },
+  "assessor": {
+   "office": "Real Estate Assessor",
+   "url": "https://salemva.gov/335/Real-Estate"
+  }
+ },
+ "CA/fresno-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor-Controller/Treasurer-Tax Collector",
+   "url": "https://www.fresnocountyca.gov/Departments/Auditor-Controller-Treasurer-Tax-Collector/Property-Tax-Information/Make-A-Payment"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.fresnocountyca.gov/Departments/Assessor"
+  }
+ },
+ "VA/hanover-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.hanovercounty.gov/382/Tax-Payments-Prepayments"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.hanovercounty.gov/185/Assessor"
+  }
+ },
+ "NC/lincoln-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Collections (Tax Department)",
+   "url": "https://www.lincolncountync.gov/80/Collection"
+  },
+  "assessor": {
+   "office": "Tax Department - Real Estate Appraisal",
+   "url": "https://www.lincolncountync.gov/100/Appraisal"
+  }
+ },
+ "MN/rock-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor-Treasurer",
+   "url": "https://www.rockmn.gov/department_directory/auditor_treasurer/index.php"
+  },
+  "assessor": {
+   "office": "Land Records Office (Recording & Assessing)",
+   "url": "https://www.rockmn.gov/department_directory/land_records_office_(recording___assessing)/index.php"
+  }
+ },
+ "NC/brunswick-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Office",
+   "url": "https://www.brunswickcountync.gov/1106/Tax-Bills-Payments"
+  },
+  "assessor": {
+   "office": "Tax Office - Real Property",
+   "url": "https://www.brunswickcountync.gov/462/Real-Property"
+  }
+ },
+ "MS/greene-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Collector",
+   "url": "https://www.greenecountyms.gov/about-5-6"
+  },
+  "assessor": {
+   "office": "Tax Assessor",
+   "url": "https://www.greenecountyms.gov/about-5-5"
+  }
+ },
+ "VA/page-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://eservices.pagecounty.virginia.gov/applications/cpage/Default.aspx?ctid=1"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://www.pagecounty.virginia.gov/155/Commissioner-of-the-Revenue"
+  }
+ },
+ "MN/lyon-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor/Treasurer",
+   "url": "https://www.lyoncountymn.gov/departments/auditor-treasurer/tax-information/find-and-or-pay-your-property-tax-online"
+  },
+  "assessor": {
+   "office": "County Assessor",
+   "url": "https://www.lyoncountymn.gov/departments/assessor"
+  }
+ },
+ "IN/hamilton-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.hamiltoncounty.in.gov/1435/Pay-Taxes-Online-and-Reports"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.hamiltoncounty.in.gov/404/Assessors-Office"
+  }
+ },
+ "IL/lake-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Lake County Treasurer",
+   "url": "https://www.lakecountyil.gov/4923/Treasurer"
+  },
+  "assessor": {
+   "office": "Chief County Assessment Office",
+   "url": "https://www.lakecountyil.gov/155/Assessments",
+   "note": "Your township assessor sets the initial value; the county office reviews it."
+  }
+ },
+ "MD/baltimore-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Office of Budget and Finance (Taxpayer Services)",
+   "url": "https://mytax.baltimorecountymd.gov/"
+  },
+  "assessor": {
+   "office": "Maryland SDAT (state assessment office)",
+   "url": "https://dat.maryland.gov/realproperty/Pages/Maryland-Assessment-Offices.aspx"
+  }
+ },
+ "MO/jasper-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Jasper County Collector",
+   "url": "https://jaspercountycollector.com/"
+  },
+  "assessor": {
+   "office": "Jasper County Assessor",
+   "url": "https://jaspercountyassessor.org/"
+  }
+ },
+ "IL/boone-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Boone County Treasurer",
+   "url": "https://boonecountytreasurer.us/"
+  },
+  "assessor": {
+   "office": "Supervisor of Assessments (Assessment Office)",
+   "url": "https://www.boonecountyil.gov/government/departments/assessment_office/index.php",
+   "note": "Your township assessor sets the initial value; the county office reviews it."
+  }
+ },
+ "MO/cass-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Collector of Revenue",
+   "url": "https://www.casscounty.com/2223/Collector"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.casscounty.com/2161/Assessor"
+  }
+ },
+ "NC/randolph-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Department",
+   "url": "https://www.randolphcountync.gov/341/Paying-Your-Taxes"
+  },
+  "assessor": {
+   "office": "Tax Department (Real Property)",
+   "url": "https://www.randolphcountync.gov/347/Real-Property"
+  }
+ },
+ "TN/bedford-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Bedford County Trustee",
+   "url": "https://www.bedfordcountytn.gov/government/trustee/index.php"
+  },
+  "assessor": {
+   "office": "Property Assessor",
+   "url": "https://www.bedfordcountytn.gov/government/property_assessor/index.php"
+  }
+ },
+ "IL/saline-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Saline County Treasurer",
+   "url": "https://salinecounty.illinois.gov/treasurer/",
+   "note": "Contact details only — no online bill lookup.",
+   "label": "Contact"
+  },
+  "assessor": {
+   "office": "Assessor (Supervisor of Assessments)",
+   "url": "https://salinecounty.illinois.gov/assessor/",
+   "note": "Your township assessor sets the initial value; the county office reviews it."
+  }
+ },
+ "MI/wayne-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Wayne County Treasurer",
+   "url": "https://www.waynecountymi.gov/Government/Elected-Officials/Treasurer/Pay-Taxes-Online",
+   "note": "Current-year taxes are paid to your city or township treasurer; the county treasurer collects delinquent taxes."
+  },
+  "assessor": {
+   "office": "Assessment & Equalization Division",
+   "url": "https://www.waynecountymi.gov/Government/Departments/Management-Budget/Assessment-Equalization",
+   "note": "Your city or township assessor sets the value; the county reviews the local rolls."
+  }
+ },
+ "NC/haywood-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Collections",
+   "url": "https://www.haywoodcountync.gov/274/Tax-Collections"
+  },
+  "assessor": {
+   "office": "Tax Assessor's Office",
+   "url": "https://www.haywoodcountync.gov/850/Tax-Assessors-Office"
+  }
+ },
+ "DE/sussex-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Finance Department (Treasury)",
+   "url": "https://sussexcountyde.gov/pay-your-bill"
+  },
+  "assessor": {
+   "office": "Assessment Division",
+   "url": "https://sussexcountyde.gov/assessment"
+  }
+ },
+ "MN/lake-of-the-woods-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor-Treasurer",
+   "url": "https://www.co.lake-of-the-woods.mn.us/auditor/property-taxes/"
+  },
+  "assessor": {
+   "office": "County Assessor",
+   "url": "https://www.co.lake-of-the-woods.mn.us/assessor/"
+  }
+ },
+ "PA/wayne-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Local tax collectors (county list)",
+   "url": "https://www.waynecountypa.gov/166/Millage-Rates",
+   "note": "Real estate tax is paid to your local municipal tax collector; this county page lists them.",
+   "label": "Local tax collectors"
+  },
+  "assessor": {
+   "office": "Tax Assessment Office",
+   "url": "https://waynecountypa.gov/161/Tax-Assessment"
+  }
+ },
+ "KY/ballard-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Ballard County Sheriff",
+   "url": "https://ballardcounty.ky.gov/ElectedOfficials/Pages/default.aspx",
+   "note": "Contact details only — no online bill lookup.",
+   "label": "Contact"
+  },
+  "assessor": {
+   "office": "Property Valuation Administrator (PVA)",
+   "url": "https://ballardcounty.ky.gov/ElectedOfficials/Pages/default.aspx",
+   "note": "Contact details only — no online property search.",
+   "label": "Assessor contact"
+  }
+ },
+ "VA/prince-edward-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.co.prince-edward.va.us/Departments/Treasurer"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://www.co.prince-edward.va.us/Departments/Commissioner-of-the-Revenue"
+  }
+ },
+ "KY/calloway-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Calloway County Sheriff's Office",
+   "url": "https://www.callkyso.com/property-taxes.php"
+  },
+  "assessor": {
+   "office": "Property Valuation Administrator (PVA)",
+   "url": "https://ccpva.org/"
+  }
+ },
+ "MO/greene-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Collector of Revenue",
+   "url": "https://greenecountymo.gov/collector/search/"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://greenecountymo.gov/assessor/"
+  }
+ },
+ "IL/union-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Union County Treasurer",
+   "url": "https://www.unioncountyil.gov/treasurer/"
+  },
+  "assessor": {
+   "office": "Supervisor of Assessments",
+   "url": "https://www.unioncountyil.gov/supervisor-of-assessments/"
+  }
+ },
+ "MD/dorchester-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Department of Finance - Treasury",
+   "url": "https://dorchestermd.gov/departments/finance-treasury/tax-information/"
+  },
+  "assessor": {
+   "office": "Maryland SDAT (state assessment office)",
+   "url": "https://dat.maryland.gov/realproperty/Pages/Maryland-Assessment-Offices.aspx"
+  }
+ },
+ "KY/gallatin-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Gallatin County Sheriff",
+   "url": "https://www.gallatinky.gov/blog/27/gallatin-county-sheriff",
+   "note": "Contact details only — no online bill lookup.",
+   "label": "Contact"
+  },
+  "assessor": {
+   "office": "Property Valuation Administrator (PVA)",
+   "url": "https://gallatinpva.com/"
+  }
+ },
+ "MI/cass-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Cass County Treasurer",
+   "url": "https://casscountymi.org/1256/Treasurer",
+   "note": "Current-year taxes are paid to your city or township treasurer; the county treasurer collects delinquent taxes."
+  },
+  "assessor": {
+   "office": "Local assessors (county list)",
+   "url": "https://casscountymi.org/1482/My-Assessor",
+   "note": "Your city or township assessor sets the value; this county page lists each one."
+  }
+ },
+ "NC/cleveland-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Administration - Tax Collector",
+   "url": "https://www.clevelandcountytaxes.com/"
+  },
+  "assessor": {
+   "office": "Tax Administration - Tax Assessor",
+   "url": "https://www.clevelandcountytaxes.com/"
+  }
+ },
+ "VA/pulaski-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.pulaskicounty.org/treasurers-office.html"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://www.pulaskicounty.org/commissioner-of-the-revenue.html"
+  }
+ },
+ "ND/cass-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "County Treasurer",
+   "url": "https://www.casscountynd.gov/services/property-taxes"
+  },
+  "assessor": {
+   "office": "Director of Tax Equalization",
+   "url": "https://www.casscountynd.gov/our-county/assessor",
+   "note": "Fargo and West Fargo have their own city assessors."
+  }
+ },
+ "OH/greene-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.greenecountyohio.gov/505/Treasurer"
+  },
+  "assessor": {
+   "office": "Auditor",
+   "url": "https://www.greenecountyohio.gov/366/Auditor"
+  }
+ },
+ "PA/lawrence-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.courthouseonline.com/AOPropertyRec.asp?State=PA&County=Lawrence&Abbrev=LR&Office=AO&caller=x",
+   "note": "Covers county real estate tax; municipal and school taxes are paid to your local tax collector. Lookup needs the control number and password printed on your bill."
+  },
+  "assessor": {
+   "office": "Assessment Office",
+   "url": "https://lawrencecountypa.gov/departments/assessment"
+  }
+ },
+ "SC/chester-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.chestercountysctax.com/taxes.html"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://chestercountysc.gov/departments/tax-and-finance-departments/assessor/"
+  }
+ },
+ "VA/winchester-city": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.winchesterva.gov/Services-Payments/Taxes/Real-Estate-Tax"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://www.winchesterva.gov/Government/City-Leadership/Constitutional-Officers/Commissioner-of-the-Revenue"
+  }
+ },
+ "NC/granville-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Administration (Collections)",
+   "url": "https://tax.granvillecounty.org/ITSPublic/TaxBillSearch"
+  },
+  "assessor": {
+   "office": "Tax Administration",
+   "url": "https://www.granvillecounty.org/238/Tax-Administration"
+  }
+ },
+ "NC/anson-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Collector",
+   "url": "https://www.co.anson.nc.us/180/Tax-Collector"
+  },
+  "assessor": {
+   "office": "Tax Assessor",
+   "url": "https://www.co.anson.nc.us/186/Tax-Assessor"
+  }
+ },
+ "NC/person-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Office (Collections)",
+   "url": "https://www.personcountync.gov/government/departments-i-z/tax/search-pay-taxes"
+  },
+  "assessor": {
+   "office": "Tax Office",
+   "url": "https://www.personcountync.gov/government/departments-i-z/tax-4376"
+  }
+ },
+ "VA/alexandria-city": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Finance Department, Treasury Division",
+   "url": "https://www.alexandriava.gov/RealEstateTax"
+  },
+  "assessor": {
+   "office": "Office of Real Estate Assessments",
+   "url": "https://www.alexandriava.gov/RealEstate"
+  }
+ },
+ "MS/hancock-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Assessor/Collector",
+   "url": "https://www.hancockcounty.ms.gov/199/Tax-Assessor"
+  },
+  "assessor": {
+   "office": "Tax Assessor",
+   "url": "https://www.hancockcounty.ms.gov/199/Tax-Assessor"
+  }
+ },
+ "KY/fayette-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Sheriff (Property Tax Division)",
+   "url": "https://fayettesheriff.com/property_taxes_lookup.php"
+  },
+  "assessor": {
+   "office": "Property Valuation Administrator (PVA)",
+   "url": "https://fayettepva.com/"
+  }
+ },
+ "MD/baltimore-city": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Department of Finance, Bureau of Revenue Collections",
+   "url": "https://pay.baltimorecity.gov/realproperty"
+  },
+  "assessor": {
+   "office": "Maryland SDAT (state assessment office)",
+   "url": "https://sdat.dat.maryland.gov/RealProperty/Pages/default.aspx"
+  }
+ },
+ "CA/los-angeles-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer and Tax Collector",
+   "url": "https://ttc.lacounty.gov/pay-your-property-taxes/"
+  },
+  "assessor": {
+   "office": "Office of the Assessor",
+   "url": "https://assessor.lacounty.gov/"
+  }
+ },
+ "IL/will-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://willcounty.gov/County-Offices/Budget-Finance/Treasurer-Office"
+  },
+  "assessor": {
+   "office": "Supervisor of Assessments",
+   "url": "https://www.willcountysoa.com/",
+   "note": "Your township assessor sets the initial value; the county office reviews it."
+  }
+ },
+ "CA/riverside-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer-Tax Collector",
+   "url": "https://countytreasurer.org/tax-collector/how-pay-your-taxes"
+  },
+  "assessor": {
+   "office": "Assessor-County Clerk-Recorder",
+   "url": "https://www.rivcoacr.org/"
+  }
+ },
+ "VA/culpeper-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://web.culpepercounty.gov/treasurer/page/pay-taxes"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://web.culpepercounty.gov/assessor"
+  }
+ },
+ "VA/covington-city": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://covington.va.us/covington-departments-and-services/treasurer.html"
+  },
+  "assessor": {
+   "office": "Commissioner of Revenue",
+   "url": "https://covington.va.us/covington-departments-and-services/commissioner-of-revenue.html"
+  }
+ },
+ "VA/gloucester-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://gloucesterva.gov/treasurer"
+  },
+  "assessor": {
+   "office": "Real Estate Assessment",
+   "url": "https://gloucesterva.gov/real-estate-assessment"
+  }
+ },
+ "MO/moniteau-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Collector of Revenue",
+   "url": "https://www.moniteaucountycollector.com/"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "http://moniteaucountyassessor.com/"
+  }
+ },
+ "NC/graham-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Administration (Tax Collector)",
+   "url": "https://grahamcounty.org/tax_collector.html"
+  },
+  "assessor": {
+   "office": "Tax Assessor",
+   "url": "https://grahamcounty.org/tax_assessor.html"
+  }
+ },
+ "VA/galax-city": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Finance Department",
+   "url": "https://galaxva.com/galax-va-finance-department/"
+  },
+  "assessor": {
+   "office": "Commissioner of Revenue",
+   "url": "https://galaxva.com/galax-commissioner-of-revenue/"
+  }
+ },
+ "VA/middlesex-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.co.middlesex.va.us/203/Treasurer"
+  },
+  "assessor": {
+   "office": "Commissioner of Revenue",
+   "url": "https://www.co.middlesex.va.us/234/Commissioner-of-Revenue"
+  }
+ },
+ "MN/benton-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor-Treasurer",
+   "url": "https://www.bentoncountymn.gov/186/Property-Tax-Statements-Payments"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.bentoncountymn.gov/152/Assessor"
+  }
+ },
+ "MN/carlton-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor/Treasurer",
+   "url": "https://www.carltoncountymn.gov/859/Property-Taxes"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.carltoncountymn.gov/149/Assessor"
+  }
+ },
+ "VA/king-and-queen-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://kingandqueenco.net/treasurers-office/"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://kingandqueenco.net/commissioner-of-the-revenue/"
+  }
+ },
+ "IL/bureau-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://bureaucounty-il.gov/directory/treasurers-office/"
+  },
+  "assessor": {
+   "office": "Supervisor of Assessments",
+   "url": "https://bureaucounty-il.gov/directory/supervisor-of-assessments/",
+   "note": "Your township assessor sets the initial value; the county office reviews it."
+  }
+ },
+ "NC/burke-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Office (Collections)",
+   "url": "https://www.burkenctax.com/taxes.html"
+  },
+  "assessor": {
+   "office": "Tax Office (listing, appraisal and assessment)",
+   "url": "https://burkenctax.com/"
+  }
+ },
+ "MN/cottonwood-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor/Treasurer",
+   "url": "https://tax.cptmn.us/PTaxPortal/#/parcelSearch/CottonWood"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.cottonwoodcountymn.gov/departments/administrative/assessor/index.php"
+  }
+ },
+ "NC/currituck-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Department",
+   "url": "https://currituckcountync.gov/tax/tax-online-services/"
+  },
+  "assessor": {
+   "office": "Tax Department (listing/assessment)",
+   "url": "https://currituckcountync.gov/tax/"
+  }
+ },
+ "IL/ford-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer / County Collector",
+   "url": "https://fordil.devnetwedge.com/"
+  },
+  "assessor": {
+   "office": "Supervisor of Assessments",
+   "url": "https://fordcounty.illinois.gov/supervisor-of-assessments/",
+   "note": "Your township assessor sets the initial value; the county office reviews it."
+  }
+ },
+ "TN/fentress-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Trustee",
+   "url": "https://fentresscountytn.gov/trustee/"
+  },
+  "assessor": {
+   "office": "Property Assessor",
+   "url": "https://fentresscountytn.gov/property-assessor/"
+  }
+ },
+ "VA/warren-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://eservices.warrencountyva.gov/"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://www.warrencountyva.gov/162/Commissioner-of-the-Revenue"
+  }
+ },
+ "VA/york-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://tax.yorkcounty.gov/"
+  },
+  "assessor": {
+   "office": "Real Estate Assessment Division",
+   "url": "https://www.yorkcounty.gov/363/Real-Estate-Assessment"
+  }
+ },
+ "IL/clinton-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer / County Collector",
+   "url": "https://il1206.cichosting.com/atasportal/"
+  },
+  "assessor": {
+   "office": "Supervisor of Assessments",
+   "url": "https://clintonco.illinois.gov/county-offices/assessments/",
+   "note": "Your township assessor sets the initial value; the county office reviews it."
+  }
+ },
+ "NC/caldwell-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Department",
+   "url": "https://caldwellcountynctax.com/taxes.html"
+  },
+  "assessor": {
+   "office": "Tax Department (appraisal/listing)",
+   "url": "https://caldwellcountynctax.com/"
+  }
+ },
+ "KY/madison-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Sheriff",
+   "url": "https://view.properlytaxes.com/index.aspx?id=10&loc=2"
+  },
+  "assessor": {
+   "office": "Property Valuation Administrator",
+   "url": "https://madisonpva.com/"
+  }
+ },
+ "WV/mineral-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Sheriff's Tax Office",
+   "url": "http://mineral.softwaresystems.com/index.html"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.mineralwv.gov/assessor/"
+  }
+ },
+ "VA/chesapeake-city": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "City Treasurer",
+   "url": "https://www.cityofchesapeake.net/1082/Treasurers-Payment-Portal"
+  },
+  "assessor": {
+   "office": "Real Estate Assessor",
+   "url": "https://www.cityofchesapeake.net/948/Real-Estate-Assessors-Office"
+  }
+ },
+ "GA/worth-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Commissioner",
+   "url": "https://www.worthcountytax.com/"
+  },
+  "assessor": {
+   "office": "Tax Assessor",
+   "url": "https://www.worthcountyboc.com/tax-assessor"
+  }
+ },
+ "MN/chisago-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Auditor-Treasurer",
+   "url": "https://www.chisagocountymn.gov/199/Property-Tax-Information"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.chisagocountymn.gov/130/Assessor"
+  }
+ },
+ "NC/ashe-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Administration",
+   "url": "https://ashecountytax.com/"
+  },
+  "assessor": {
+   "office": "Tax Administration (Tax Assessing division)",
+   "url": "https://www.ashecountygov.com/departments/tax-administration"
+  }
+ },
+ "WA/walla-walla-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://www.wwcowa.gov/government/treasurer/payment_center.php"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.wwcowa.gov/departments/assessor/index.php"
+  }
+ },
+ "CA/placer-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer-Tax Collector",
+   "url": "https://common3.mptsweb.com/mbc/placer/tax/search"
+  },
+  "assessor": {
+   "office": "Assessor",
+   "url": "https://www.placer.ca.gov/Assessor"
+  }
+ },
+ "FL/brevard-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Collector",
+   "url": "https://www.brevardtaxcollector.com/services/pay-property-taxes/"
+  },
+  "assessor": {
+   "office": "Property Appraiser",
+   "url": "https://www.bcpao.us/propertysearch/"
+  }
+ },
+ "FL/polk-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Collector",
+   "url": "https://polktaxfl.gov/services/search-and-pay-property-taxes/"
+  },
+  "assessor": {
+   "office": "Property Appraiser",
+   "url": "https://www.polkflpa.gov/CamaSearch.aspx"
+  }
+ },
+ "PA/allegheny-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://alleghenycountytreasurer.us/real-estate-tax/",
+   "note": "Covers county real estate tax; municipal and school taxes are paid to your local tax collector."
+  },
+  "assessor": {
+   "office": "Office of Property Assessments",
+   "url": "https://www.alleghenycounty.us/Services/Property-Assessment-and-Real-Estate/Property-Assessments"
+  }
+ },
+ "KY/lawrence-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Sheriff",
+   "url": "https://view.properlytaxes.com/index.aspx?id=154&loc=2"
+  },
+  "assessor": {
+   "office": "Property Valuation Administrator",
+   "url": "https://lawrencecountyky.gov/government/",
+   "note": "No office website; the county government page lists the PVA's phone number.",
+   "label": "Assessor contact"
+  }
+ },
+ "TN/fayette-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Trustee",
+   "url": "https://tennesseetrustee.org/index.php?entity=FAYETTE&state=TN"
+  },
+  "assessor": {
+   "office": "Assessor of Property",
+   "url": "https://fayettetn.us/departments/assessor/"
+  }
+ },
+ "VA/carroll-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://wipp.edmundsassoc.com/Wipp/?wippid=CARR"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://carrollcountyva.gov/government/commissioner_of_the_revenue/index.php"
+  }
+ },
+ "KY/clark-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Sheriff",
+   "url": "https://clark.kysheriff.org/wp/tax-collection/"
+  },
+  "assessor": {
+   "office": "Property Valuation Administrator",
+   "url": "https://www.clarkpva.com/"
+  }
+ },
+ "MS/madison-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Tax Collector",
+   "url": "https://www.madison-co.com/elected-offices/tax-collector"
+  },
+  "assessor": {
+   "office": "Tax Assessor",
+   "url": "https://www.madison-co.com/elected-offices/tax-assessor"
+  }
+ },
+ "VA/king-william-county": {
+  "checked": "2026-09-24",
+  "pay": {
+   "office": "Treasurer",
+   "url": "https://wipp.edmundsgovtech.cloud/home?wippId=KING"
+  },
+  "assessor": {
+   "office": "Commissioner of the Revenue",
+   "url": "https://www.kwc.gov/178/Commissioner-of-the-Revenue"
+  }
+ }
+}
