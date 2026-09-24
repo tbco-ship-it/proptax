@@ -59,6 +59,17 @@ def mmdd(s):
     return f"{MONTHS[int(m.group(1)) - 1]} {int(m.group(2))}" if m else (s or "")
 
 
+def late(d):
+    """Delinquency wording: a 'delinquent' date the day after 'due' is the first late day ("from"); a later one is the end of a grace period ("after")."""
+    m1, m2 = re.fullmatch(r"(\d{2})-(\d{2})", d.get("due") or ""), re.fullmatch(r"(\d{2})-(\d{2})", d.get("delinquent") or "")
+    if not (m1 and m2):
+        return ""
+    nxt = dt.date(2026, int(m1.group(1)), int(m1.group(2))) + dt.timedelta(days=1)
+    first_late = (nxt.month, nxt.day) == (int(m2.group(1)), int(m2.group(2)))
+    first_late = first_late or d.get("late") == "from"   # state notes say the listed date is itself the first late day (WV, NM, NJ, NV)
+    return f"{'from' if first_late else 'after'} {mmdd(d['delinquent'])}"
+
+
 def write_sitemaps(urls, origin, base, lastmod=None, limit=5000):
     """One sitemap index plus a file per section, so Search Console reports coverage per section
     instead of one opaque pile. urls is a list of (shard, path)."""
@@ -150,6 +161,7 @@ def main():
     env.filters["relative_to"] = relative_to
     env.filters["pct"] = pct
     env.filters["mmdd"] = mmdd
+    env.filters["late"] = late
     env.globals["STATE_NAMES"] = {st: s["name"] for st, s in states.items()}
     env.globals.update(site=SITE, base=base, origin=origin, today=today.isoformat(), v=v, adsense_pub=args.adsense_pub,
                        us=us, states=states, state_list=state_list, n_counties=len(counties), source=source, rules=rules, MIN_POP_RANK=MIN_POP_RANK)

@@ -3,7 +3,7 @@
 {% if r %}
 {% if not r.due %}<p class="sheet-title" style="margin:0 0 4px">Payment dates vary by local tax authority.</p><p class="prose" style="margin-top:0">Check your city, town or county tax collector for this year's deadline. The statewide notes below are a general guide.</p>{% endif %}
 <table class="tbl spec"><tbody>
-{% for d in r.due %}<tr><th>{{ d.label }}</th><td><div>Due {{ d.due|mmdd }}</div>{% if d.pay_by_text %}<div><strong>Pay by {{ d.pay_by_text }}</strong></div>{% endif %}<div class="muted">{% if d.late_rule %}{{ d.late_rule }}{% elif d.delinquent %}Late after {{ d.delinquent|mmdd }} under state law — the exact cutoff time, weekend/holiday carry-over and this year's date are on your bill.{% else %}Confirm the late-payment cutoff on your official bill.{% endif %}</div>{% if d.applies_to %}<div class="muted">{{ d.applies_to }}</div>{% endif %}</td></tr>{% endfor %}
+{% for d in r.due %}<tr><th>{{ d.label }}</th><td><div>Due {{ d.due|mmdd }}</div>{% if d.pay_by_text %}<div><strong>Pay by {{ d.pay_by_text }}</strong></div>{% endif %}<div class="muted">{% if d.late_rule %}{{ d.late_rule }}{% elif d.delinquent %}Late {{ d|late }} under state law — the exact cutoff time, weekend/holiday carry-over and this year's date are on your bill.{% else %}Confirm the late-payment cutoff on your official bill.{% endif %}</div>{% if d.applies_to %}<div class="muted">{{ d.applies_to }}</div>{% endif %}</td></tr>{% endfor %}
 {% if r.penalty %}<tr><th>Late penalty</th><td>{{ r.penalty }}</td></tr>{% endif %}
 {% if r.discount and r.discount != 'none' %}<tr><th>Early-payment discount</th><td>{{ r.discount }}</td></tr>{% endif %}
 {% if r.appeal_window %}<tr><th>Appeal window</th><td>{{ r.appeal_window }}</td></tr>{% endif %}
