@@ -276,10 +276,11 @@
   }
  },
  "IL/lake-county": {
-  "checked": "2026-09-24",
+  "checked": "2026-10-17",
   "pay": {
    "office": "Lake County Treasurer",
-   "url": "https://www.lakecountyil.gov/4923/Treasurer"
+   "url": "https://www.lakecountyil.gov/531/By-Mail",
+   "note": "Tax Year 2025 (payable 2026): first installment due June 4, 2026; second installment due September 4, 2026. Future due dates can change; confirm them on your official bill."
   },
   "assessor": {
    "office": "Chief County Assessment Office",
